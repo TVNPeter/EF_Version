@@ -25,10 +25,6 @@ namespace EF_Version.DAL
         {
             return context.Doctors.Where(d => d.FullName.Contains(name) && d.IsDeleted != true).ToList();
         }
-        public List<Doctor> GetDoctorsByPhone(string phone)
-        {
-            return context.Doctors.Where(d => d.Phone.Contains(phone) && d.IsDeleted != true).ToList();
-        }
         public void AddDoctor(Doctor doctor)
         {
             context.Doctors.Add(doctor);

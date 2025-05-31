@@ -11,7 +11,7 @@ namespace EF_Version.DAL
         ClinicContext context = new ClinicContext();
         public List<Patient> GetPatients()
         {
-            return context.Patients.Where(p => p.IsDeleted != true).ToList();
+            return context.Patients.Select(p => p).Where(p => p.IsDeleted != true).ToList();
         }
         public Patient GetPatientById(int id)
         {
@@ -36,6 +36,7 @@ namespace EF_Version.DAL
                 existingPatient.Address = patient.Address;
                 existingPatient.Phone = patient.Phone;
                 existingPatient.BirthDate = patient.BirthDate;
+                context.SaveChanges();
             }
         }
         public void DeletePatient(int id)

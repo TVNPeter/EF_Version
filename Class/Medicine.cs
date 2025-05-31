@@ -18,5 +18,14 @@ namespace EF_Version
         public double Price { get; set; } // Price of the medicine
         public bool IsDeleted { get; set; } // Soft delete flag
         public virtual ICollection<PrescriptionDetail> PrescriptionDetails { get; set; }
+        // Constructor
+        public Medicine() { }
+        public Medicine(string name, string dosage, double price)
+        {
+            Name = name;
+            Dosage = dosage;
+            Price = price;
+            IsDeleted = false; // Default to not deleted
+        }
     }
 }

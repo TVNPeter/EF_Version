@@ -15,5 +15,14 @@ namespace EF_Version
         //Navigation properties
         public virtual Prescription Prescription { get; set; } // Navigation property to Prescription
         public virtual Medicine Medicine { get; set; } // Navigation property to Medicine
+        public PrescriptionDetail() { }
+        public PrescriptionDetail(int prescriptionId, int medicineId, int quantity, string frequency)
+        {
+            PrescriptionID = prescriptionId;
+            MedicineID = medicineId;
+            Quantity = quantity;
+            Frequency = frequency;
+            IsDeleted = false; // Default to not deleted
+        }
     }
 }

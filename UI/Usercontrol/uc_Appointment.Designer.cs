@@ -30,33 +30,47 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_Appointment));
             this.dgv_Appointments = new System.Windows.Forms.DataGridView();
-            this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
-            this.date = new System.Windows.Forms.DateTimePicker();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.cb_patientid = new System.Windows.Forms.ComboBox();
-            this.txt_appointment = new System.Windows.Forms.TextBox();
+            this.AppointmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppointmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PatientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DoctorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dTP_AD = new System.Windows.Forms.DateTimePicker();
+            this.cb_DID = new System.Windows.Forms.ComboBox();
+            this.cb_PID = new System.Windows.Forms.ComboBox();
+            this.txt_AID = new System.Windows.Forms.TextBox();
             this.lb_appointments = new System.Windows.Forms.Label();
             this.lb_patient = new System.Windows.Forms.Label();
             this.cb_doctorid = new System.Windows.Forms.Label();
             this.lb_appointment = new System.Windows.Forms.Label();
-            this.btn_Reload = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pb_FindByAD = new System.Windows.Forms.PictureBox();
+            this.pb_FindByAID = new System.Windows.Forms.PictureBox();
+            this.pb_FindByPID = new System.Windows.Forms.PictureBox();
+            this.pb_FindByDID = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cb_Status = new System.Windows.Forms.ComboBox();
+            this.btn_Reload = new System.Windows.Forms.Button();
+            this.btn_Cancel = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.btn_EditPrescription = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Appointments)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_FindByAD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_FindByAID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_FindByPID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_FindByDID)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_Appointments
             // 
             this.dgv_Appointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Appointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AppointmentID,
+            this.AppointmentDate,
+            this.Status,
+            this.PatientID,
+            this.DoctorID,
+            this.Fee});
             this.dgv_Appointments.Location = new System.Drawing.Point(16, 144);
             this.dgv_Appointments.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Appointments.Name = "dgv_Appointments";
@@ -64,61 +78,72 @@
             this.dgv_Appointments.RowTemplate.Height = 24;
             this.dgv_Appointments.Size = new System.Drawing.Size(580, 275);
             this.dgv_Appointments.TabIndex = 42;
+            this.dgv_Appointments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Appointments_CellClick);
             // 
-            // btn_Add
+            // AppointmentID
             // 
-            this.btn_Add.Location = new System.Drawing.Point(424, 47);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(58, 36);
-            this.btn_Add.TabIndex = 38;
-            this.btn_Add.Text = "Add";
-            this.btn_Add.UseVisualStyleBackColor = true;
+            this.AppointmentID.HeaderText = "ID";
+            this.AppointmentID.Name = "AppointmentID";
             // 
-            // btn_Delete
+            // AppointmentDate
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(501, 47);
-            this.btn_Delete.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(58, 36);
-            this.btn_Delete.TabIndex = 37;
-            this.btn_Delete.Text = "Cancel";
-            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.AppointmentDate.HeaderText = "Date";
+            this.AppointmentDate.Name = "AppointmentDate";
             // 
-            // date
+            // Status
             // 
-            this.date.Location = new System.Drawing.Point(193, 106);
-            this.date.Margin = new System.Windows.Forms.Padding(2);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(180, 20);
-            this.date.TabIndex = 36;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
             // 
-            // comboBox3
+            // PatientID
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(129, 75);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(70, 21);
-            this.comboBox3.TabIndex = 35;
+            this.PatientID.HeaderText = "PatientID";
+            this.PatientID.Name = "PatientID";
             // 
-            // cb_patientid
+            // DoctorID
             // 
-            this.cb_patientid.FormattingEnabled = true;
-            this.cb_patientid.Location = new System.Drawing.Point(129, 47);
-            this.cb_patientid.Margin = new System.Windows.Forms.Padding(2);
-            this.cb_patientid.Name = "cb_patientid";
-            this.cb_patientid.Size = new System.Drawing.Size(70, 21);
-            this.cb_patientid.TabIndex = 33;
+            this.DoctorID.HeaderText = "DoctorID";
+            this.DoctorID.Name = "DoctorID";
             // 
-            // txt_appointment
+            // Fee
             // 
-            this.txt_appointment.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txt_appointment.Location = new System.Drawing.Point(167, 19);
-            this.txt_appointment.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_appointment.Name = "txt_appointment";
-            this.txt_appointment.Size = new System.Drawing.Size(86, 20);
-            this.txt_appointment.TabIndex = 31;
+            this.Fee.HeaderText = "Fee";
+            this.Fee.Name = "Fee";
+            // 
+            // dTP_AD
+            // 
+            this.dTP_AD.Location = new System.Drawing.Point(193, 106);
+            this.dTP_AD.Margin = new System.Windows.Forms.Padding(2);
+            this.dTP_AD.Name = "dTP_AD";
+            this.dTP_AD.Size = new System.Drawing.Size(180, 20);
+            this.dTP_AD.TabIndex = 36;
+            // 
+            // cb_DID
+            // 
+            this.cb_DID.FormattingEnabled = true;
+            this.cb_DID.Location = new System.Drawing.Point(129, 75);
+            this.cb_DID.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_DID.Name = "cb_DID";
+            this.cb_DID.Size = new System.Drawing.Size(70, 21);
+            this.cb_DID.TabIndex = 35;
+            // 
+            // cb_PID
+            // 
+            this.cb_PID.FormattingEnabled = true;
+            this.cb_PID.Location = new System.Drawing.Point(129, 47);
+            this.cb_PID.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_PID.Name = "cb_PID";
+            this.cb_PID.Size = new System.Drawing.Size(70, 21);
+            this.cb_PID.TabIndex = 33;
+            // 
+            // txt_AID
+            // 
+            this.txt_AID.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txt_AID.Location = new System.Drawing.Point(167, 19);
+            this.txt_AID.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_AID.Name = "txt_AID";
+            this.txt_AID.Size = new System.Drawing.Size(86, 20);
+            this.txt_AID.TabIndex = 31;
             // 
             // lb_appointments
             // 
@@ -164,59 +189,53 @@
             this.lb_appointment.TabIndex = 27;
             this.lb_appointment.Text = "Appointment date:";
             // 
-            // btn_Reload
+            // pb_FindByAD
             // 
-            this.btn_Reload.Location = new System.Drawing.Point(424, 90);
-            this.btn_Reload.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Reload.Name = "btn_Reload";
-            this.btn_Reload.Size = new System.Drawing.Size(135, 36);
-            this.btn_Reload.TabIndex = 43;
-            this.btn_Reload.Text = "Reload";
-            this.btn_Reload.UseVisualStyleBackColor = true;
+            this.pb_FindByAD.Image = ((System.Drawing.Image)(resources.GetObject("pb_FindByAD.Image")));
+            this.pb_FindByAD.Location = new System.Drawing.Point(377, 106);
+            this.pb_FindByAD.Margin = new System.Windows.Forms.Padding(2);
+            this.pb_FindByAD.Name = "pb_FindByAD";
+            this.pb_FindByAD.Size = new System.Drawing.Size(20, 24);
+            this.pb_FindByAD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_FindByAD.TabIndex = 46;
+            this.pb_FindByAD.TabStop = false;
+            this.pb_FindByAD.Click += new System.EventHandler(this.pb_FindByAD_Click);
             // 
-            // pictureBox1
+            // pb_FindByAID
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(375, 100);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 46;
-            this.pictureBox1.TabStop = false;
+            this.pb_FindByAID.Image = ((System.Drawing.Image)(resources.GetObject("pb_FindByAID.Image")));
+            this.pb_FindByAID.Location = new System.Drawing.Point(268, 19);
+            this.pb_FindByAID.Margin = new System.Windows.Forms.Padding(2);
+            this.pb_FindByAID.Name = "pb_FindByAID";
+            this.pb_FindByAID.Size = new System.Drawing.Size(20, 24);
+            this.pb_FindByAID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_FindByAID.TabIndex = 47;
+            this.pb_FindByAID.TabStop = false;
+            this.pb_FindByAID.Click += new System.EventHandler(this.pb_FindByAID_Click);
             // 
-            // pictureBox2
+            // pb_FindByPID
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(268, 19);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
+            this.pb_FindByPID.Image = ((System.Drawing.Image)(resources.GetObject("pb_FindByPID.Image")));
+            this.pb_FindByPID.Location = new System.Drawing.Point(203, 44);
+            this.pb_FindByPID.Margin = new System.Windows.Forms.Padding(2);
+            this.pb_FindByPID.Name = "pb_FindByPID";
+            this.pb_FindByPID.Size = new System.Drawing.Size(20, 24);
+            this.pb_FindByPID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_FindByPID.TabIndex = 48;
+            this.pb_FindByPID.TabStop = false;
+            this.pb_FindByPID.Click += new System.EventHandler(this.pb_FindByPID_Click);
             // 
-            // pictureBox3
+            // pb_FindByDID
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(203, 44);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 48;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(203, 75);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 49;
-            this.pictureBox4.TabStop = false;
+            this.pb_FindByDID.Image = ((System.Drawing.Image)(resources.GetObject("pb_FindByDID.Image")));
+            this.pb_FindByDID.Location = new System.Drawing.Point(203, 75);
+            this.pb_FindByDID.Margin = new System.Windows.Forms.Padding(2);
+            this.pb_FindByDID.Name = "pb_FindByDID";
+            this.pb_FindByDID.Size = new System.Drawing.Size(20, 24);
+            this.pb_FindByDID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_FindByDID.TabIndex = 49;
+            this.pb_FindByDID.TabStop = false;
+            this.pb_FindByDID.Click += new System.EventHandler(this.pb_FindByDID_Click);
             // 
             // label1
             // 
@@ -241,37 +260,90 @@
             this.cb_Status.Name = "cb_Status";
             this.cb_Status.Size = new System.Drawing.Size(70, 21);
             this.cb_Status.TabIndex = 51;
+            this.cb_Status.SelectedIndexChanged += new System.EventHandler(this.cb_Status_SelectedIndexChanged);
+            // 
+            // btn_Reload
+            // 
+            this.btn_Reload.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reload.Location = new System.Drawing.Point(424, 116);
+            this.btn_Reload.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Reload.Name = "btn_Reload";
+            this.btn_Reload.Size = new System.Drawing.Size(159, 24);
+            this.btn_Reload.TabIndex = 54;
+            this.btn_Reload.Text = "Reload";
+            this.btn_Reload.UseVisualStyleBackColor = true;
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
+            // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancel.ForeColor = System.Drawing.Color.Red;
+            this.btn_Cancel.Location = new System.Drawing.Point(523, 47);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(60, 40);
+            this.btn_Cancel.TabIndex = 53;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.ForeColor = System.Drawing.Color.Lime;
+            this.btn_Add.Location = new System.Drawing.Point(424, 47);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(60, 40);
+            this.btn_Add.TabIndex = 52;
+            this.btn_Add.Text = "Add";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            // 
+            // btn_EditPrescription
+            // 
+            this.btn_EditPrescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditPrescription.ForeColor = System.Drawing.Color.Blue;
+            this.btn_EditPrescription.Location = new System.Drawing.Point(424, 91);
+            this.btn_EditPrescription.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_EditPrescription.Name = "btn_EditPrescription";
+            this.btn_EditPrescription.Size = new System.Drawing.Size(159, 24);
+            this.btn_EditPrescription.TabIndex = 55;
+            this.btn_EditPrescription.Text = "Edit Prescription";
+            this.btn_EditPrescription.UseVisualStyleBackColor = true;
             // 
             // uc_Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_EditPrescription);
+            this.Controls.Add(this.btn_Reload);
+            this.Controls.Add(this.btn_Cancel);
+            this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.cb_Status);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_Reload);
+            this.Controls.Add(this.pb_FindByDID);
+            this.Controls.Add(this.pb_FindByPID);
+            this.Controls.Add(this.pb_FindByAID);
+            this.Controls.Add(this.pb_FindByAD);
             this.Controls.Add(this.dgv_Appointments);
-            this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.btn_Delete);
-            this.Controls.Add(this.date);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.cb_patientid);
-            this.Controls.Add(this.txt_appointment);
+            this.Controls.Add(this.dTP_AD);
+            this.Controls.Add(this.cb_DID);
+            this.Controls.Add(this.cb_PID);
+            this.Controls.Add(this.txt_AID);
             this.Controls.Add(this.lb_appointments);
             this.Controls.Add(this.lb_patient);
             this.Controls.Add(this.cb_doctorid);
             this.Controls.Add(this.lb_appointment);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uc_Appointment";
             this.Size = new System.Drawing.Size(619, 440);
+            this.Load += new System.EventHandler(this.uc_Appointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Appointments)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_FindByAD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_FindByAID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_FindByPID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_FindByDID)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,22 +352,29 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_Appointments;
-        private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Button btn_Delete;
-        private System.Windows.Forms.DateTimePicker date;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox cb_patientid;
-        private System.Windows.Forms.TextBox txt_appointment;
+        private System.Windows.Forms.DateTimePicker dTP_AD;
+        private System.Windows.Forms.ComboBox cb_DID;
+        private System.Windows.Forms.ComboBox cb_PID;
+        private System.Windows.Forms.TextBox txt_AID;
         private System.Windows.Forms.Label lb_appointments;
         private System.Windows.Forms.Label lb_patient;
         private System.Windows.Forms.Label cb_doctorid;
         private System.Windows.Forms.Label lb_appointment;
-        private System.Windows.Forms.Button btn_Reload;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pb_FindByAD;
+        private System.Windows.Forms.PictureBox pb_FindByAID;
+        private System.Windows.Forms.PictureBox pb_FindByPID;
+        private System.Windows.Forms.PictureBox pb_FindByDID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cb_Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PatientID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DoctorID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fee;
+        private System.Windows.Forms.Button btn_Reload;
+        private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.Button btn_EditPrescription;
     }
 }

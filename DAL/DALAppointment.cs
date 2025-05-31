@@ -39,11 +39,7 @@ namespace EF_Version.DAL
             var existingAppointment = context.Appointments.Find(appointment.AppointmentID);
             if (existingAppointment != null)
             {
-                existingAppointment.AppointmentDate = appointment.AppointmentDate;
                 existingAppointment.Status = appointment.Status;
-                existingAppointment.PatientID = appointment.PatientID;
-                existingAppointment.DoctorID = appointment.DoctorID;
-                existingAppointment.Fee = appointment.Fee;
                 context.SaveChanges();
             }
         }

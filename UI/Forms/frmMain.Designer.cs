@@ -204,7 +204,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private System.Windows.Forms.PictureBox pb_Exit;
         private System.Windows.Forms.Label lbl_Hello;
         private System.Windows.Forms.Button btn_Medicines;

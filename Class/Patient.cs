@@ -20,5 +20,15 @@ namespace EF_Version
         public string Phone { get; set; }
         public bool IsDeleted { get; set; } // Soft delete flag
         public virtual ICollection<Appointment> Appointments { get; set; }
+        public Patient() { }
+        public Patient(string fullName, string gender, DateTime BD, string address, string phone)
+        {
+            FullName = fullName;
+            Gender = gender;
+            BirthDate = BD;
+            Address = address;
+            Phone = phone;
+            IsDeleted = false; // Default to not deleted
+        }
     }
 }

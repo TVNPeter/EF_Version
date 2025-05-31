@@ -21,5 +21,16 @@ namespace EF_Version
         // Navigation properties
         public virtual Patient Patient { get; set; }
         public virtual Doctor Doctor { get; set; }
+        //Constructor
+        public Appointment() { }
+        public Appointment(int patientId, int doctorId, DateTime appointmentDate, string status)
+        {
+            PatientID = patientId;
+            DoctorID = doctorId;
+            AppointmentDate = appointmentDate;
+            Status = status;
+            Fee = 0;
+            IsDeleted = false; // Default to not deleted
+        }
     }
 }

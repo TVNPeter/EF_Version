@@ -20,5 +20,14 @@ namespace EF_Version
         // Navigation properties
         public virtual Appointment Appointment { get; set; }
         public virtual ICollection<PrescriptionDetail> Details { get; set; }
+        public Prescription() { }
+        public Prescription(DateTime dateIssued, int appointmentId, string notes, string diagnosis)
+        {
+            DateIssued = dateIssued;
+            AppointmentID = appointmentId;
+            Notes = notes;
+            Diagnosis = diagnosis;
+            IsDeleted = false; // Default to not deleted
+        }
     }
 }
