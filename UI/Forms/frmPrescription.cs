@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EF_Version.BLL;
 
 namespace EF_Version.Presentation.Forms
 {
@@ -15,6 +16,16 @@ namespace EF_Version.Presentation.Forms
         public frmPrescription()
         {
             InitializeComponent();
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

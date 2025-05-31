@@ -80,4 +80,4 @@ E:\2024-2025-HKII\WIPR\Final Term Project\EF Version\obj\Debug\EF_Version.Presen
 E:\2024-2025-HKII\WIPR\Final Term Project\EF Version\obj\Debug\EF_Version.Presentation.Usercontrol.uc_Patient.resources
 E:\2024-2025-HKII\WIPR\Final Term Project\EF Version\bin\Debug\Guna.UI2.dll
 E:\2024-2025-HKII\WIPR\Final Term Project\EF Version\obj\Debug\EF_Version.Presentation.Forms.frmAddMedicines.resources
-E:\2024-2025-HKII\WIPR\Final Term Project\EF Version\obj\Debug\EF_Version.Presentation.Usercontrol.uc_Medicines.resources
+E:\2024-2025-HKII\WIPR\Final Term Project\EF Version\obj\Debug\EF_Version.Presentation.Usercontrol.uc_Medicine.resources

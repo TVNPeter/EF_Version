@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EF_Version.BLL
 {
-    internal class BLLDoctor
+    internal class DALDoctor
     {
     }
 }

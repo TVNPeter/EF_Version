@@ -50,5 +50,10 @@ namespace EF_Version.Presentation.Forms
         {
             this.Close();
         }
+
+        private void btn_Medicines_Click(object sender, EventArgs e)
+        {
+            AddUserControlToPanel(new uc_Medicine());
+        }
     }
 }

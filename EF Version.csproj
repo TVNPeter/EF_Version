@@ -91,82 +91,87 @@
     <Compile Include="Class\Appointment.cs" />
     <Compile Include="BLL\BLLDoctor.cs" />
     <Compile Include="BLL\BLLPatient.cs" />
-    <Compile Include="DAL\DAL.cs" />
     <Compile Include="Class\Doctor.cs" />
     <Compile Include="Class\ClinicContext.cs" />
     <Compile Include="Class\Medicine.cs" />
     <Compile Include="Class\Patient.cs" />
     <Compile Include="Class\Prescription.cs" />
     <Compile Include="Class\PrescriptionDetail.cs" />
-    <Compile Include="Presentation\Forms\frmAddMedicines.cs">
+    <Compile Include="DAL\DALAppointment.cs" />
+    <Compile Include="DAL\DALDoctor.cs" />
+    <Compile Include="DAL\DALMedicine.cs" />
+    <Compile Include="DAL\DALPatient.cs" />
+    <Compile Include="DAL\DALPrescription.cs" />
+    <Compile Include="DAL\DALPrescriptionDetail.cs" />
+    <Compile Include="UI\Forms\frmAddMedicines.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\Forms\frmAddMedicines.Designer.cs">
+    <Compile Include="UI\Forms\frmAddMedicines.Designer.cs">
       <DependentUpon>frmAddMedicines.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Usercontrol\uc_Medicines.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation\Usercontrol\uc_Medicines.Designer.cs">
-      <DependentUpon>uc_Medicines.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Presentation\Forms\frmMain.cs">
+    <Compile Include="UI\Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\Forms\frmMain.Designer.cs">
+    <Compile Include="UI\Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Forms\frmPrescription.cs">
+    <Compile Include="UI\Forms\frmPrescription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\Forms\frmPrescription.Designer.cs">
+    <Compile Include="UI\Forms\frmPrescription.Designer.cs">
       <DependentUpon>frmPrescription.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Usercontrol\uc_Appointment.cs">
+    <Compile Include="UI\Usercontrol\uc_Appointment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentation\Usercontrol\uc_Appointment.Designer.cs">
+    <Compile Include="UI\Usercontrol\uc_Appointment.Designer.cs">
       <DependentUpon>uc_Appointment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Usercontrol\uc_Doctor.cs">
+    <Compile Include="UI\Usercontrol\uc_Doctor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentation\Usercontrol\uc_Doctor.Designer.cs">
+    <Compile Include="UI\Usercontrol\uc_Doctor.Designer.cs">
       <DependentUpon>uc_Doctor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Usercontrol\uc_Patient.cs">
+    <Compile Include="UI\Usercontrol\uc_Patient.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentation\Usercontrol\uc_Patient.Designer.cs">
+    <Compile Include="UI\Usercontrol\uc_Patient.Designer.cs">
       <DependentUpon>uc_Patient.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentation\Forms\frmMain.resx">
+    <Compile Include="UI\Usercontrol\uc_Medicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Usercontrol\uc_Medicine.Designer.cs">
+      <DependentUpon>uc_Medicine.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\Forms\frmAddMedicines.resx">
+    <EmbeddedResource Include="UI\Forms\frmAddMedicines.resx">
       <DependentUpon>frmAddMedicines.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\Forms\frmPrescription.resx">
+    <EmbeddedResource Include="UI\Forms\frmPrescription.resx">
       <DependentUpon>frmPrescription.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\Usercontrol\uc_Appointment.resx">
+    <EmbeddedResource Include="UI\Usercontrol\uc_Appointment.resx">
       <DependentUpon>uc_Appointment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\Usercontrol\uc_Doctor.resx">
+    <EmbeddedResource Include="UI\Usercontrol\uc_Doctor.resx">
       <DependentUpon>uc_Doctor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\Usercontrol\uc_Medicines.resx">
-      <DependentUpon>uc_Medicines.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\Usercontrol\uc_Patient.resx">
+    <EmbeddedResource Include="UI\Usercontrol\uc_Patient.resx">
       <DependentUpon>uc_Patient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Usercontrol\uc_Medicine.resx">
+      <DependentUpon>uc_Medicine.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />

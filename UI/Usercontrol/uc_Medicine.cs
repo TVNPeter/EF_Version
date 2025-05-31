@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EF_Version.Presentation.Usercontrol
 {
-    public partial class uc_Medicines : Form
+    public partial class uc_Medicine : UserControl
     {
-        public uc_Medicines()
+        public uc_Medicine()
         {
             InitializeComponent();
         }
