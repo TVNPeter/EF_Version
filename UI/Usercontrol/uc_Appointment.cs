@@ -277,5 +277,24 @@ namespace EF_Version.Presentation.Usercontrol
             frmPrescription prescriptionForm = new frmPrescription(Convert.ToInt32(txt_AID.Text));
             prescriptionForm.ShowDialog();
         }
+
+        private void btn_Done_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_AID.Text) || !int.TryParse(txt_AID.Text, out int appointmentId))
+            {
+                MessageBox.Show("Please select an appointment first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            try
+            {
+                service.UpdateStatus(appointmentId, "Completed", out err);
+                LoadData();
+                MessageBox.Show("Appointment marked as completed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, $"Error: {err}", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

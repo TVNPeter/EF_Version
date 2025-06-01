@@ -37,6 +37,27 @@ namespace EF_Version.BLL
                 return false;
             }
         }
+        public bool UpdateStatus(int appointmentId, string status, out string err)
+        {
+            err = string.Empty;
+            try
+            {
+                var appointment = repo.GetAppointmentById(appointmentId);
+                if (appointment == null)
+                {
+                    err = "Appointment not found.";
+                    return false;
+                }
+                appointment.Status = status;
+                repo.UpdateAppointment(appointment);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return false;
+            }
+        }
         public List<Appointment> GetAll()
         {
             string err;

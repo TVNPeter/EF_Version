@@ -54,6 +54,7 @@
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_EditPrescription = new System.Windows.Forms.Button();
+            this.btn_Done = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Appointments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_FindByAD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_FindByAID)).BeginInit();
@@ -71,12 +72,12 @@
             this.PatientID,
             this.DoctorID,
             this.Fee});
-            this.dgv_Appointments.Location = new System.Drawing.Point(32, 277);
-            this.dgv_Appointments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Appointments.Location = new System.Drawing.Point(16, 144);
+            this.dgv_Appointments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Appointments.Name = "dgv_Appointments";
             this.dgv_Appointments.RowHeadersWidth = 51;
             this.dgv_Appointments.RowTemplate.Height = 24;
-            this.dgv_Appointments.Size = new System.Drawing.Size(1160, 529);
+            this.dgv_Appointments.Size = new System.Drawing.Size(580, 275);
             this.dgv_Appointments.TabIndex = 42;
             this.dgv_Appointments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Appointments_CellClick);
             // 
@@ -112,45 +113,45 @@
             // 
             // dTP_AD
             // 
-            this.dTP_AD.Location = new System.Drawing.Point(386, 204);
-            this.dTP_AD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dTP_AD.Location = new System.Drawing.Point(193, 106);
+            this.dTP_AD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dTP_AD.Name = "dTP_AD";
-            this.dTP_AD.Size = new System.Drawing.Size(356, 31);
+            this.dTP_AD.Size = new System.Drawing.Size(180, 20);
             this.dTP_AD.TabIndex = 36;
             // 
             // cb_DID
             // 
             this.cb_DID.FormattingEnabled = true;
-            this.cb_DID.Location = new System.Drawing.Point(258, 144);
-            this.cb_DID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_DID.Location = new System.Drawing.Point(129, 75);
+            this.cb_DID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cb_DID.Name = "cb_DID";
-            this.cb_DID.Size = new System.Drawing.Size(136, 33);
+            this.cb_DID.Size = new System.Drawing.Size(70, 21);
             this.cb_DID.TabIndex = 35;
             // 
             // cb_PID
             // 
             this.cb_PID.FormattingEnabled = true;
-            this.cb_PID.Location = new System.Drawing.Point(258, 90);
-            this.cb_PID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_PID.Location = new System.Drawing.Point(129, 47);
+            this.cb_PID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cb_PID.Name = "cb_PID";
-            this.cb_PID.Size = new System.Drawing.Size(136, 33);
+            this.cb_PID.Size = new System.Drawing.Size(70, 21);
             this.cb_PID.TabIndex = 33;
             // 
             // txt_AID
             // 
             this.txt_AID.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txt_AID.Location = new System.Drawing.Point(334, 37);
-            this.txt_AID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_AID.Location = new System.Drawing.Point(167, 19);
+            this.txt_AID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_AID.Name = "txt_AID";
-            this.txt_AID.Size = new System.Drawing.Size(168, 31);
+            this.txt_AID.Size = new System.Drawing.Size(86, 20);
             this.txt_AID.TabIndex = 31;
             // 
             // lb_appointments
             // 
             this.lb_appointments.AutoSize = true;
             this.lb_appointments.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_appointments.Location = new System.Drawing.Point(52, 35);
-            this.lb_appointments.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_appointments.Location = new System.Drawing.Point(26, 18);
+            this.lb_appointments.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_appointments.Name = "lb_appointments";
             this.lb_appointments.Size = new System.Drawing.Size(142, 21);
             this.lb_appointments.TabIndex = 30;
@@ -160,8 +161,8 @@
             // 
             this.lb_patient.AutoSize = true;
             this.lb_patient.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_patient.Location = new System.Drawing.Point(52, 88);
-            this.lb_patient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_patient.Location = new System.Drawing.Point(26, 46);
+            this.lb_patient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_patient.Name = "lb_patient";
             this.lb_patient.Size = new System.Drawing.Size(92, 21);
             this.lb_patient.TabIndex = 29;
@@ -171,8 +172,8 @@
             // 
             this.cb_doctorid.AutoSize = true;
             this.cb_doctorid.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_doctorid.Location = new System.Drawing.Point(52, 146);
-            this.cb_doctorid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cb_doctorid.Location = new System.Drawing.Point(26, 76);
+            this.cb_doctorid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cb_doctorid.Name = "cb_doctorid";
             this.cb_doctorid.Size = new System.Drawing.Size(89, 21);
             this.cb_doctorid.TabIndex = 28;
@@ -182,8 +183,8 @@
             // 
             this.lb_appointment.AutoSize = true;
             this.lb_appointment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_appointment.Location = new System.Drawing.Point(52, 204);
-            this.lb_appointment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_appointment.Location = new System.Drawing.Point(26, 106);
+            this.lb_appointment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_appointment.Name = "lb_appointment";
             this.lb_appointment.Size = new System.Drawing.Size(164, 21);
             this.lb_appointment.TabIndex = 27;
@@ -192,10 +193,10 @@
             // pb_FindByAD
             // 
             this.pb_FindByAD.Image = ((System.Drawing.Image)(resources.GetObject("pb_FindByAD.Image")));
-            this.pb_FindByAD.Location = new System.Drawing.Point(754, 204);
-            this.pb_FindByAD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_FindByAD.Location = new System.Drawing.Point(377, 106);
+            this.pb_FindByAD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pb_FindByAD.Name = "pb_FindByAD";
-            this.pb_FindByAD.Size = new System.Drawing.Size(40, 46);
+            this.pb_FindByAD.Size = new System.Drawing.Size(20, 24);
             this.pb_FindByAD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_FindByAD.TabIndex = 46;
             this.pb_FindByAD.TabStop = false;
@@ -204,10 +205,10 @@
             // pb_FindByAID
             // 
             this.pb_FindByAID.Image = ((System.Drawing.Image)(resources.GetObject("pb_FindByAID.Image")));
-            this.pb_FindByAID.Location = new System.Drawing.Point(536, 37);
-            this.pb_FindByAID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_FindByAID.Location = new System.Drawing.Point(268, 19);
+            this.pb_FindByAID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pb_FindByAID.Name = "pb_FindByAID";
-            this.pb_FindByAID.Size = new System.Drawing.Size(40, 46);
+            this.pb_FindByAID.Size = new System.Drawing.Size(20, 24);
             this.pb_FindByAID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_FindByAID.TabIndex = 47;
             this.pb_FindByAID.TabStop = false;
@@ -216,10 +217,10 @@
             // pb_FindByPID
             // 
             this.pb_FindByPID.Image = ((System.Drawing.Image)(resources.GetObject("pb_FindByPID.Image")));
-            this.pb_FindByPID.Location = new System.Drawing.Point(406, 85);
-            this.pb_FindByPID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_FindByPID.Location = new System.Drawing.Point(203, 44);
+            this.pb_FindByPID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pb_FindByPID.Name = "pb_FindByPID";
-            this.pb_FindByPID.Size = new System.Drawing.Size(40, 46);
+            this.pb_FindByPID.Size = new System.Drawing.Size(20, 24);
             this.pb_FindByPID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_FindByPID.TabIndex = 48;
             this.pb_FindByPID.TabStop = false;
@@ -228,10 +229,10 @@
             // pb_FindByDID
             // 
             this.pb_FindByDID.Image = ((System.Drawing.Image)(resources.GetObject("pb_FindByDID.Image")));
-            this.pb_FindByDID.Location = new System.Drawing.Point(406, 144);
-            this.pb_FindByDID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_FindByDID.Location = new System.Drawing.Point(203, 75);
+            this.pb_FindByDID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pb_FindByDID.Name = "pb_FindByDID";
-            this.pb_FindByDID.Size = new System.Drawing.Size(40, 46);
+            this.pb_FindByDID.Size = new System.Drawing.Size(20, 24);
             this.pb_FindByDID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_FindByDID.TabIndex = 49;
             this.pb_FindByDID.TabStop = false;
@@ -241,8 +242,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(796, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(398, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 21);
             this.label1.TabIndex = 50;
@@ -255,20 +256,20 @@
             "Scheduled",
             "Cancelled",
             "Completed"});
-            this.cb_Status.Location = new System.Drawing.Point(956, 29);
-            this.cb_Status.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_Status.Location = new System.Drawing.Point(478, 15);
+            this.cb_Status.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cb_Status.Name = "cb_Status";
-            this.cb_Status.Size = new System.Drawing.Size(165, 33);
+            this.cb_Status.Size = new System.Drawing.Size(84, 21);
             this.cb_Status.TabIndex = 51;
             this.cb_Status.SelectedIndexChanged += new System.EventHandler(this.cb_Status_SelectedIndexChanged);
             // 
             // btn_Reload
             // 
             this.btn_Reload.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reload.Location = new System.Drawing.Point(848, 223);
-            this.btn_Reload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Reload.Location = new System.Drawing.Point(424, 116);
+            this.btn_Reload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Reload.Name = "btn_Reload";
-            this.btn_Reload.Size = new System.Drawing.Size(318, 46);
+            this.btn_Reload.Size = new System.Drawing.Size(159, 24);
             this.btn_Reload.TabIndex = 54;
             this.btn_Reload.Text = "Reload";
             this.btn_Reload.UseVisualStyleBackColor = true;
@@ -278,10 +279,10 @@
             // 
             this.btn_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancel.ForeColor = System.Drawing.Color.Red;
-            this.btn_Cancel.Location = new System.Drawing.Point(1046, 90);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Cancel.Location = new System.Drawing.Point(523, 47);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(120, 77);
+            this.btn_Cancel.Size = new System.Drawing.Size(60, 40);
             this.btn_Cancel.TabIndex = 53;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
@@ -291,10 +292,10 @@
             // 
             this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.ForeColor = System.Drawing.Color.Lime;
-            this.btn_Add.Location = new System.Drawing.Point(848, 90);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Add.Location = new System.Drawing.Point(313, 46);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(120, 77);
+            this.btn_Add.Size = new System.Drawing.Size(60, 40);
             this.btn_Add.TabIndex = 52;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -304,19 +305,33 @@
             // 
             this.btn_EditPrescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_EditPrescription.ForeColor = System.Drawing.Color.Blue;
-            this.btn_EditPrescription.Location = new System.Drawing.Point(848, 175);
-            this.btn_EditPrescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_EditPrescription.Location = new System.Drawing.Point(424, 91);
+            this.btn_EditPrescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_EditPrescription.Name = "btn_EditPrescription";
-            this.btn_EditPrescription.Size = new System.Drawing.Size(318, 46);
+            this.btn_EditPrescription.Size = new System.Drawing.Size(159, 24);
             this.btn_EditPrescription.TabIndex = 55;
             this.btn_EditPrescription.Text = "Edit Prescription";
             this.btn_EditPrescription.UseVisualStyleBackColor = true;
             this.btn_EditPrescription.Click += new System.EventHandler(this.btn_EditPrescription_Click);
             // 
+            // btn_Done
+            // 
+            this.btn_Done.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Done.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_Done.Location = new System.Drawing.Point(413, 47);
+            this.btn_Done.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Done.Name = "btn_Done";
+            this.btn_Done.Size = new System.Drawing.Size(60, 40);
+            this.btn_Done.TabIndex = 56;
+            this.btn_Done.Text = "Done";
+            this.btn_Done.UseVisualStyleBackColor = true;
+            this.btn_Done.Click += new System.EventHandler(this.btn_Done_Click);
+            // 
             // uc_Appointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_Done);
             this.Controls.Add(this.btn_EditPrescription);
             this.Controls.Add(this.btn_Reload);
             this.Controls.Add(this.btn_Cancel);
@@ -336,9 +351,9 @@
             this.Controls.Add(this.lb_patient);
             this.Controls.Add(this.cb_doctorid);
             this.Controls.Add(this.lb_appointment);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "uc_Appointment";
-            this.Size = new System.Drawing.Size(1238, 846);
+            this.Size = new System.Drawing.Size(619, 440);
             this.Load += new System.EventHandler(this.uc_Appointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Appointments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_FindByAD)).EndInit();
@@ -377,5 +392,6 @@
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_EditPrescription;
+        private System.Windows.Forms.Button btn_Done;
     }
 }
