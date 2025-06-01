@@ -31,6 +31,12 @@
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.dgv_Medication = new System.Windows.Forms.DataGridView();
+            this.PrescriptionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MedicineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MedicineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dosage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_AID = new System.Windows.Forms.TextBox();
             this.txt_Diagnosis = new System.Windows.Forms.TextBox();
             this.txt_Note = new System.Windows.Forms.TextBox();
@@ -42,12 +48,7 @@
             this.btn_AddMedicine = new System.Windows.Forms.Button();
             this.btn_RemoveMedicine = new System.Windows.Forms.Button();
             this.btn_Reload = new System.Windows.Forms.Button();
-            this.PrescriptionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MedicineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MedicineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dosage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_Print = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Medication)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +95,36 @@
             this.dgv_Medication.RowTemplate.Height = 24;
             this.dgv_Medication.Size = new System.Drawing.Size(1186, 577);
             this.dgv_Medication.TabIndex = 32;
+            // 
+            // PrescriptionID
+            // 
+            this.PrescriptionID.HeaderText = "PrescriptionID";
+            this.PrescriptionID.Name = "PrescriptionID";
+            // 
+            // MedicineID
+            // 
+            this.MedicineID.HeaderText = "MedicineID";
+            this.MedicineID.Name = "MedicineID";
+            // 
+            // MedicineName
+            // 
+            this.MedicineName.HeaderText = "MedicineName";
+            this.MedicineName.Name = "MedicineName";
+            // 
+            // Dosage
+            // 
+            this.Dosage.HeaderText = "Dosage";
+            this.Dosage.Name = "Dosage";
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // Frequency
+            // 
+            this.Frequency.HeaderText = "Frequency";
+            this.Frequency.Name = "Frequency";
             // 
             // txt_AID
             // 
@@ -213,41 +244,24 @@
             this.btn_Reload.UseVisualStyleBackColor = true;
             this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
             // 
-            // PrescriptionID
+            // txt_Print
             // 
-            this.PrescriptionID.HeaderText = "PrescriptionID";
-            this.PrescriptionID.Name = "PrescriptionID";
-            // 
-            // MedicineID
-            // 
-            this.MedicineID.HeaderText = "MedicineID";
-            this.MedicineID.Name = "MedicineID";
-            // 
-            // MedicineName
-            // 
-            this.MedicineName.HeaderText = "MedicineName";
-            this.MedicineName.Name = "MedicineName";
-            // 
-            // Dosage
-            // 
-            this.Dosage.HeaderText = "Dosage";
-            this.Dosage.Name = "Dosage";
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            // 
-            // Frequency
-            // 
-            this.Frequency.HeaderText = "Frequency";
-            this.Frequency.Name = "Frequency";
+            this.txt_Print.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Print.Location = new System.Drawing.Point(494, 293);
+            this.txt_Print.Margin = new System.Windows.Forms.Padding(8);
+            this.txt_Print.Name = "txt_Print";
+            this.txt_Print.Size = new System.Drawing.Size(271, 77);
+            this.txt_Print.TabIndex = 38;
+            this.txt_Print.Text = "Print Prescription";
+            this.txt_Print.UseVisualStyleBackColor = true;
+            this.txt_Print.Click += new System.EventHandler(this.txt_Print_Click);
             // 
             // frmPrescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1940, 1220);
+            this.Controls.Add(this.txt_Print);
             this.Controls.Add(this.btn_Reload);
             this.Controls.Add(this.btn_RemoveMedicine);
             this.Controls.Add(this.btn_AddMedicine);
@@ -295,5 +309,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Dosage;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frequency;
+        private System.Windows.Forms.Button txt_Print;
     }
 }

@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataForPrescription = new EF_Version.DataSet.DataForPrescription();
+            this.dataSet1 = new EF_Version.DataSet.DataSet1();
             this.dataForPrescriptionDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataForPrescriptionDetailTableAdapter = new EF_Version.DataSet.DataForPrescriptionTableAdapters.DataForPrescriptionDetailTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataForPrescription)).BeginInit();
+            this.dataForPrescriptionDetailTableAdapter = new EF_Version.DataSet.DataSet1TableAdapters.DataForPrescriptionDetailTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataForPrescriptionDetailBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.dataForPrescriptionDetailBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dataForPrescriptionDetailBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "EF_Version.Reports.RpViewPreDetails.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -51,15 +51,15 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dataForPrescription
+            // dataSet1
             // 
-            this.dataForPrescription.DataSetName = "DataForPrescription";
-            this.dataForPrescription.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataForPrescriptionDetailBindingSource
             // 
             this.dataForPrescriptionDetailBindingSource.DataMember = "DataForPrescriptionDetail";
-            this.dataForPrescriptionDetailBindingSource.DataSource = this.dataForPrescription;
+            this.dataForPrescriptionDetailBindingSource.DataSource = this.dataSet1;
             // 
             // dataForPrescriptionDetailTableAdapter
             // 
@@ -74,7 +74,7 @@
             this.Name = "frmViewPreDetail";
             this.Text = "frmViewPreDetail";
             this.Load += new System.EventHandler(this.frmViewPreDetail_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataForPrescription)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataForPrescriptionDetailBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -84,7 +84,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource dataForPrescriptionDetailBindingSource;
-        private DataSet.DataForPrescription dataForPrescription;
-        private DataSet.DataForPrescriptionTableAdapters.DataForPrescriptionDetailTableAdapter dataForPrescriptionDetailTableAdapter;
+        private DataSet.DataSet1 dataSet1;
+        private DataSet.DataSet1TableAdapters.DataForPrescriptionDetailTableAdapter dataForPrescriptionDetailTableAdapter;
     }
 }

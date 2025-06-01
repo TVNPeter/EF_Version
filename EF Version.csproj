@@ -188,7 +188,6 @@
     <EmbeddedResource Include="Reports\frmViewPreDetail.resx">
       <DependentUpon>frmViewPreDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\PrescriptionDetail.rdlc" />
     <EmbeddedResource Include="Reports\RpViewPreDetails.rdlc" />
     <EmbeddedResource Include="UI\Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -238,6 +237,7 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\EF_Version.DataSet.DataSet1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EF_Version.BLL;
+using EF_Version.Reports;
 
 namespace EF_Version.Presentation.Forms
 {
@@ -210,6 +211,12 @@ namespace EF_Version.Presentation.Forms
                 errorMessage = ex.Message;
                 return false;
             }
+        }
+
+        private void txt_Print_Click(object sender, EventArgs e)
+        {
+            frmViewPreDetail viewPreDetailForm = new frmViewPreDetail(PreID);
+            viewPreDetailForm.ShowDialog();
         }
     }
 }

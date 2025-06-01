@@ -18,7 +18,7 @@ namespace EF_Version
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmViewPreDetail());
+            Application.Run(new frmMain());
         }
     }
 }
