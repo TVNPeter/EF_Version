@@ -8,7 +8,7 @@ namespace EF_Version.DAL
 {
     internal class DALPrescription
     {
-        ClinicContext context = new ClinicContext();
+        ClinicContext context = new ClinicContext(); 
         public Prescription GetPrescriptionById(int id)
         {
             return context.Prescriptions.FirstOrDefault(p => p.PrescriptionID == id && p.IsDeleted != true);

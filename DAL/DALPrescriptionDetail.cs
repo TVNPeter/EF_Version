@@ -11,7 +11,11 @@ namespace EF_Version.DAL
         private ClinicContext context = new ClinicContext();
         public PrescriptionDetail GetPrescriptionDetailById(int PID, int MID)
         {
-            return context.PrescriptionDetails.FirstOrDefault(pd => pd.PrescriptionID == PID && pd.MedicineID == MID && pd.IsDeleted != true);
+            return context.PrescriptionDetails.FirstOrDefault(pd => pd.PrescriptionID == PID && pd.MedicineID == MID);
+        }
+        public List<PrescriptionDetail> GetPrescriptionDetailsByPrescriptionId(int prescriptionId)
+        {
+            return context.PrescriptionDetails.Where(pd => pd.PrescriptionID == prescriptionId).ToList();
         }
         public void AddPrescriptionDetail(PrescriptionDetail prescriptionDetail)
         {
@@ -22,7 +26,7 @@ namespace EF_Version.DAL
         public void UpdatePrescriptionDetail(PrescriptionDetail prescriptionDetail)
         {
             if (prescriptionDetail == null) throw new ArgumentNullException(nameof(prescriptionDetail));
-            var existingPrescriptionDetail = context.PrescriptionDetails.FirstOrDefault(pd => pd.PrescriptionID == prescriptionDetail.PrescriptionID && pd.MedicineID == prescriptionDetail.MedicineID && pd.IsDeleted != true);
+            var existingPrescriptionDetail = context.PrescriptionDetails.FirstOrDefault(pd => pd.PrescriptionID == prescriptionDetail.PrescriptionID && pd.MedicineID == prescriptionDetail.MedicineID);
             if (existingPrescriptionDetail != null)
             {
                 existingPrescriptionDetail.Quantity = prescriptionDetail.Quantity;
@@ -32,12 +36,8 @@ namespace EF_Version.DAL
         }
         public void DeletePrescriptionDetail(int PID, int MID)
         {
-            var prescriptionDetail = context.PrescriptionDetails.FirstOrDefault(pd => pd.PrescriptionID == PID && pd.MedicineID == MID && pd.IsDeleted != true);
-            if (prescriptionDetail != null)
-            {
-                prescriptionDetail.IsDeleted = true;
-                context.SaveChanges();
-            }
+            context.PrescriptionDetails.Remove(context.PrescriptionDetails.FirstOrDefault(pd => pd.PrescriptionID == PID && pd.MedicineID == MID));
+            context.SaveChanges();
         }
     }
 }

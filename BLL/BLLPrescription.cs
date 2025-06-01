@@ -8,7 +8,9 @@ namespace EF_Version.BLL
 {
     internal class BLLPrescription
     {
-        private DALPrescription repo = new DALPrescription();
+        private DALPrescription repo = new DALPrescription(); 
+        
+
         public bool Update(Prescription p, out string err)
         {
             try

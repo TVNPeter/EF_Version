@@ -269,6 +269,11 @@ namespace EF_Version.Presentation.Usercontrol
 
         private void btn_EditPrescription_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_AID.Text) || !int.TryParse(txt_AID.Text, out int appointmentId))
+            {
+                MessageBox.Show("Please select an appointment first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             frmPrescription prescriptionForm = new frmPrescription(Convert.ToInt32(txt_AID.Text));
             prescriptionForm.ShowDialog();
         }

@@ -39,22 +39,35 @@ namespace EF_Version.DAL
         }
         public void AddAppointment(Appointment appointment)
         {
-            context.Appointments.Add(appointment);
-            context.Prescriptions.Add(new Prescription
+            using (var transaction = context.Database.BeginTransaction())
             {
-                AppointmentID = appointment.AppointmentID,
-                DateIssued = DateTime.Now,
-                Notes = "",
-                Diagnosis = "",
-                IsDeleted = false
-            });
-            context.SaveChanges();
+                try
+                {
+                    context.Appointments.Add(appointment);
+                    context.Prescriptions.Add(new Prescription
+                    {
+                        AppointmentID = appointment.AppointmentID,
+                        DateIssued = DateTime.Now,
+                        Notes = "",
+                        Diagnosis = "",
+                        IsDeleted = false
+                    });
+                    context.SaveChanges();
+                    transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+            }
         }
         public void UpdateAppointment(Appointment appointment)
         {
             var existingAppointment = context.Appointments.Find(appointment.AppointmentID);
             if (existingAppointment != null)
             {
+                existingAppointment.Fee = appointment.Fee;
                 existingAppointment.Status = appointment.Status;
                 context.SaveChanges();
             }

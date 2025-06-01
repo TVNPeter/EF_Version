@@ -27,6 +27,14 @@ namespace EF_Version.Presentation.Forms
             InitializeComponent();
             AID = aID;
             prescription = service.GetByAppointmentId(AID, out string err);
+
+            if (prescription == null)
+            {
+                MessageBox.Show($"Error loading prescription: {err}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+                return;
+            }
+
             PreID = prescription.PrescriptionID;
             txt_AID.Text = AID.ToString();
             txt_PID.Text = PreID.ToString();
@@ -53,7 +61,6 @@ namespace EF_Version.Presentation.Forms
             
             try
             {
-                // 1. Cập nhật thông tin đơn thuốc
                 bool success = service.Update(prescription, out err);
                 if (!success)
                 {
@@ -61,19 +68,8 @@ namespace EF_Version.Presentation.Forms
                     return;
                 }
                 
-                // 2. Tính tổng chi phí thuốc
-                BLLAppointment appointmentService = new BLLAppointment();
-                double totalMedicationCost = serviceDetail.CalculateTotalMedicationCost(PreID, out err);
-                if (!string.IsNullOrEmpty(err))
+                if (UpdateMedicationFee(out err))
                 {
-                    MessageBox.Show($"Error calculating medication cost: {err}");
-                    return;
-                }
-                
-                // 3. Cập nhật Fee trong Appointment
-                if (appointmentService.UpdateFee(AID, totalMedicationCost, out err))
-                {
-                    MessageBox.Show($"Prescription updated successfully. Total fee: {totalMedicationCost:C}");
                     this.Close();
                 }
                 else
@@ -103,13 +99,11 @@ namespace EF_Version.Presentation.Forms
                 {
                     try
                     {
-                        BLLAppointment appointmentService = new BLLAppointment();
-                        double totalMedicationCost = serviceDetail.CalculateTotalMedicationCost(PreID, out err);
-                        appointmentService.UpdateFee(AID, totalMedicationCost, out err);
-                        
-                        // Hiển thị kết quả
-                        LoadData();
-                        MessageBox.Show($"Medicine removed successfully. Updated fee: {totalMedicationCost:C}");
+                        if (UpdateMedicationFee(out err))
+                        {
+                            LoadData();
+                            MessageBox.Show($"Medicine removed successfully. Updated fee: {err}");
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -136,15 +130,16 @@ namespace EF_Version.Presentation.Forms
             frmAddMedicines addMedicinesForm = new frmAddMedicines(PreID);
             if (addMedicinesForm.ShowDialog() == DialogResult.OK)
             {
-                // Sau khi thêm thuốc thành công, cập nhật Fee
                 try
                 {
-                    BLLAppointment appointmentService = new BLLAppointment();
-                    double totalMedicationCost = serviceDetail.CalculateTotalMedicationCost(PreID, out string err);
-                    appointmentService.UpdateFee(AID, totalMedicationCost, out err);
-                    
-                    // Hiển thị kết quả
-                    LoadData();
+                    if (UpdateMedicationFee(out string err))
+                    {
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Error updating fee: {err}");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -156,10 +151,8 @@ namespace EF_Version.Presentation.Forms
         {
             try
             {
-                // Lấy dữ liệu chi tiết kê đơn kèm thông tin thuốc
                 var data = serviceDetail.GetByPrescriptionId(PreID, out string err);
                 
-                // Tạo danh sách hiển thị với thông tin chi tiết hơn
                 var displayData = data.Select(d => new {
                     PrescriptionID = d.PrescriptionID,
                     MedicineID = d.MedicineID,
@@ -173,7 +166,6 @@ namespace EF_Version.Presentation.Forms
 
                 dgv_Medication.AutoGenerateColumns = false;
 
-                // Cập nhật DataPropertyName cho từng cột
                 dgv_Medication.Columns[0].DataPropertyName = "PrescriptionID";
                 dgv_Medication.Columns[1].DataPropertyName = "MedicineID";
                 dgv_Medication.Columns[2].DataPropertyName = "MedicineName";
@@ -181,7 +173,7 @@ namespace EF_Version.Presentation.Forms
                 dgv_Medication.Columns[4].DataPropertyName = "Quantity";
                 dgv_Medication.Columns[5].DataPropertyName = "Frequency";
 
-                dgv_Medication.DataSource = displayData;
+                dgv_Medication.DataSource = data;
                 dgv_Medication.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 
                 double totalCost = displayData.Sum(d => d.TotalPrice);
@@ -200,6 +192,24 @@ namespace EF_Version.Presentation.Forms
         private void btn_Reload_Click(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private bool UpdateMedicationFee(out string errorMessage)
+        {
+            errorMessage = string.Empty;
+            try
+            {
+                BLLAppointment appointmentService = new BLLAppointment();
+                double totalMedicationCost = serviceDetail.CalculateTotalMedicationCost(PreID, out errorMessage);
+                if (!string.IsNullOrEmpty(errorMessage)) return false;
+                
+                return appointmentService.UpdateFee(AID, totalMedicationCost, out errorMessage);
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+                return false;
+            }
         }
     }
 }

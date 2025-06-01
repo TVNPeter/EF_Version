@@ -9,26 +9,60 @@ namespace EF_Version.BLL
 {
     internal class BLLPrescriptionDetail
     {
-        ClinicContext db = new ClinicContext();
-        public List<PrescriptionDetail> GetByPrescriptionId(int prescriptionId, out string err)
+        DALPrescriptionDetail repo = new DALPrescriptionDetail();
+
+        public bool Add(PrescriptionDetail pd, out string err)
         {
-            err = string.Empty;
             try
             {
-                return db.PrescriptionDetails.Where(pd => pd.PrescriptionID == prescriptionId && pd.IsDeleted != true).ToList();
+                repo.AddPrescriptionDetail(pd);
+                err = string.Empty;
+                return true;
             }
             catch (Exception ex)
             {
                 err = ex.Message;
-                return new List<PrescriptionDetail>();
+                return false;
             }
         }
-        public PrescriptionDetail GetByPrescriptionAndMedicineId(int prescriptionId, int medicineId, out string err)
+        public bool Update(PrescriptionDetail pd, out string err)
         {
-            err = string.Empty;
             try
             {
-                return db.PrescriptionDetails.FirstOrDefault(pd => pd.PrescriptionID == prescriptionId && pd.MedicineID == medicineId);
+                repo.UpdatePrescriptionDetail(pd);
+                err = string.Empty;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return false;
+            }
+        }
+        public bool Delete(int PID, int MID, out string err)
+        {
+            try
+            {
+                repo.DeletePrescriptionDetail(PID, MID);
+                err = string.Empty;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return false;
+            }
+        }
+        public PrescriptionDetail GetById(int PID, int MID, out string err)
+        {
+            try
+            {
+                var detail = repo.GetPrescriptionDetailById(PID, MID);
+                if (detail == null)
+                    throw new Exception("Prescription detail not found.");
+
+                err = string.Empty;
+                return detail;
             }
             catch (Exception ex)
             {
@@ -36,90 +70,53 @@ namespace EF_Version.BLL
                 return null;
             }
         }
-        public bool Add(PrescriptionDetail detail, out string err)
+        public PrescriptionDetail GetByPrescriptionAndMedicineId(int PID, int MID, out string err)
         {
-            err = string.Empty;
             try
             {
-                db.PrescriptionDetails.Add(detail);
-                db.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                err = ex.Message;
-                return false;
-            }
-        }
-        public bool Update(PrescriptionDetail detail, out string err)
-        {
-            err = string.Empty;
-            try
-            {
-                var existingDetail = db.PrescriptionDetails.Find(detail.PrescriptionID, detail.MedicineID);
-                if (existingDetail == null)
-                {
-                    err = "Prescription detail not found.";
-                    return false;
-                }
-                existingDetail.Quantity = detail.Quantity;
-                existingDetail.Frequency = detail.Frequency;
-                db.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                err = ex.Message;
-                return false;
-            }
-        }
-        public bool Delete(int prescriptionId, int medicineId, out string err)
-        {
-            err = string.Empty;
-            try
-            {
-                var detail = db.PrescriptionDetails.Find(prescriptionId, medicineId);
+                var detail = repo.GetPrescriptionDetailById(PID, MID);
                 if (detail == null)
-                {
-                    err = "Prescription detail not found.";
-                    return false;
-                }
-                detail.IsDeleted = true; // Soft delete
-                db.SaveChanges();
-                return true;
+                    throw new Exception("Prescription detail not found.");
+                err = string.Empty;
+                return detail;
             }
             catch (Exception ex)
             {
                 err = ex.Message;
-                return false;
+                return null;
             }
         }
-        public double CalculateTotalMedicationCost(int prescriptionId, out string err)
+        public double CalculateTotalMedicationCost(int PreID, out string err)
         {
-            err = string.Empty;
             try
             {
-                // Ensure the Include method is accessible by using System.Data.Entity
-                var details = db.PrescriptionDetails
-                    .Where(pd => pd.PrescriptionID == prescriptionId && pd.IsDeleted != true)
-                    .Include(pd => pd.Medicine) // Include Medicine details
-                    .ToList();
-
-                double totalCost = 0;
-                foreach (var detail in details)
+                using (var context = new ClinicContext())
                 {
-                    if (detail.Medicine != null)
-                    {
-                        totalCost += detail.Medicine.Price * detail.Quantity;
-                    }
-                }
+                    var totalCost = context.PrescriptionDetails
+                        .Where(pd => pd.PrescriptionID == PreID)
+                        .Sum(pd => pd.Quantity * pd.Medicine.Price);
 
-                return totalCost;
+                    err = string.Empty;
+                    return totalCost;
+                }
             }
             catch (Exception ex)
             {
                 err = ex.Message;
-                return 0;
+                return 0.0;
+            }
+        }
+        public List<PrescriptionDetail> GetByPrescriptionId(int PreID, out string err)
+        {
+            try
+            {
+                err = string.Empty;
+                return repo.GetPrescriptionDetailsByPrescriptionId(PreID);
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return null;
             }
         }
     }

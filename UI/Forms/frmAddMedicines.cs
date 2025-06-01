@@ -82,9 +82,11 @@ namespace EF_Version.Presentation.Forms
                     
                     if (result == DialogResult.Yes)
                     {
+                        existingDetail.MedicineID = mid;
+                        existingDetail.MedicineName = medicine.Name;
+                        existingDetail.Dosage = medicine.Dosage;
                         existingDetail.Quantity = quantity;
                         existingDetail.Frequency = frequency;
-                        existingDetail.IsDeleted = false;
                         if (servicePrepDetail.Update(existingDetail, out string errUpdate))
                         {
                             MessageBox.Show("Medicine updated successfully.", 
@@ -109,9 +111,10 @@ namespace EF_Version.Presentation.Forms
                 {
                     PrescriptionID = prepID,
                     MedicineID = mid,
+                    MedicineName = medicine.Name,
+                    Dosage = medicine.Dosage,
                     Quantity = quantity,
                     Frequency = frequency,
-                    IsDeleted = false
                 };
 
                 string err;

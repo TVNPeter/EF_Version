@@ -45,7 +45,7 @@
   <Class Name="EF_Version.Account">
     <Position X="9.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAAEQAAAQgAAAAAAAQCAAAAAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAEQAAAAgAAAAAAAACAAAAAQAAAAA=</HashCode>
       <FileName>Class\Account.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -67,7 +67,14 @@
     <Position X="12.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PasswordHelper.cs</FileName>
+      <FileName>Class\PasswordHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EF_Version.PrescriptionReportItem">
+    <Position X="11.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAIAAAAAAAAIAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>PrescriptionReportItem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
