@@ -105,5 +105,27 @@ namespace EF_Version.BLL
                 return null;
             }
         }
+        public bool UpdateFee(int appointmentId, double fee, out string err)
+        {
+            err = string.Empty;
+            try
+            {
+                var appointment = repo.GetAppointmentById(appointmentId);
+                if (appointment == null)
+                {
+                    err = "Appointment not found.";
+                    return false;
+                }
+
+                appointment.Fee = fee;
+                repo.UpdateAppointment(appointment);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return false;
+            }
+        }
     }
 }

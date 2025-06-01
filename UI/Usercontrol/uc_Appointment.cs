@@ -208,7 +208,8 @@ namespace EF_Version.Presentation.Usercontrol
                 dgv_Appointments.Columns[2].DataPropertyName = "Status";
                 dgv_Appointments.Columns[3].DataPropertyName = "PatientID";
                 dgv_Appointments.Columns[4].DataPropertyName = "DoctorID";
-                
+                dgv_Appointments.Columns[5].DataPropertyName = "Fee";
+
                 dgv_Appointments.DataSource = data;
                 dgv_Appointments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 

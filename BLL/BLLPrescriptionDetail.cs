@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,12 +15,25 @@ namespace EF_Version.BLL
             err = string.Empty;
             try
             {
-                return db.PrescriptionDetails.Where(pd => pd.PrescriptionID == prescriptionId).ToList();
+                return db.PrescriptionDetails.Where(pd => pd.PrescriptionID == prescriptionId && pd.IsDeleted != true).ToList();
             }
             catch (Exception ex)
             {
                 err = ex.Message;
                 return new List<PrescriptionDetail>();
+            }
+        }
+        public PrescriptionDetail GetByPrescriptionAndMedicineId(int prescriptionId, int medicineId, out string err)
+        {
+            err = string.Empty;
+            try
+            {
+                return db.PrescriptionDetails.FirstOrDefault(pd => pd.PrescriptionID == prescriptionId && pd.MedicineID == medicineId);
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return null;
             }
         }
         public bool Add(PrescriptionDetail detail, out string err)
@@ -78,6 +92,34 @@ namespace EF_Version.BLL
             {
                 err = ex.Message;
                 return false;
+            }
+        }
+        public double CalculateTotalMedicationCost(int prescriptionId, out string err)
+        {
+            err = string.Empty;
+            try
+            {
+                // Ensure the Include method is accessible by using System.Data.Entity
+                var details = db.PrescriptionDetails
+                    .Where(pd => pd.PrescriptionID == prescriptionId && pd.IsDeleted != true)
+                    .Include(pd => pd.Medicine) // Include Medicine details
+                    .ToList();
+
+                double totalCost = 0;
+                foreach (var detail in details)
+                {
+                    if (detail.Medicine != null)
+                    {
+                        totalCost += detail.Medicine.Price * detail.Quantity;
+                    }
+                }
+
+                return totalCost;
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return 0;
             }
         }
     }

@@ -12,20 +12,16 @@ namespace EF_Version.Presentation.Forms
 {
     public partial class frmAddMedicines : Form
     {
-        List<Medication> medication;
         int prepID;
         BLLPrescriptionDetail servicePrepDetail = new BLLPrescriptionDetail();
         BLLMedicine serviceMedicine = new BLLMedicine();
         public frmAddMedicines()
         {
             InitializeComponent();
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         }
-        public frmAddMedicines(List<Medication> list, int PrepID)
+        public frmAddMedicines(int PrepID)
         {
             InitializeComponent();
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            medication = list;
             prepID = PrepID;
         }
 
@@ -36,16 +32,79 @@ namespace EF_Version.Presentation.Forms
 
         private void btn_OK_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_MID.Text) || 
+                string.IsNullOrWhiteSpace(txt_Quantity.Text) || 
+                string.IsNullOrWhiteSpace(txt_Frequency.Text))
+            {
+                MessageBox.Show("Please fill in all required fields (Medicine ID, Quantity, and Frequency).", 
+                    "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(txt_MID.Text, out int mid))
+            {
+                MessageBox.Show("Medicine ID must be a valid number.", 
+                    "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(txt_Quantity.Text, out int quantity))
+            {
+                MessageBox.Show("Quantity must be a valid number.", 
+                    "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (quantity <= 0)
+            {
+                MessageBox.Show("Quantity must be greater than zero.", 
+                    "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string frequency = txt_Frequency.Text.Trim();
+
             try
             {
-                int mid = Convert.ToInt32(txt_MID.Text);
-                int quantity = Convert.ToInt32(txt_Quantity.Text);
-                string frequency = txt_Frequency.Text;
-                string medName = txt_Name.Text;
-                string dosage = txt_Dosage.Text;
+                var medicine = serviceMedicine.GetById(mid, out string errMedicine);
+                if (medicine == null)
+                {
+                    MessageBox.Show($"Medicine with ID {mid} does not exist. {errMedicine}", 
+                        "Invalid Medicine", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                Medication newMedication = new Medication(prepID, mid, medName, dosage, quantity, frequency);
-                medication.Add(newMedication);
+                var existingDetail = servicePrepDetail.GetByPrescriptionAndMedicineId(prepID, Int32.Parse(txt_MID.Text), out string errDetails);
+                if (existingDetail != null)
+                {
+                    DialogResult result = MessageBox.Show("This medicine is already in the prescription. Do you want to update it?", 
+                        "Medicine Already Added", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    
+                    if (result == DialogResult.Yes)
+                    {
+                        existingDetail.Quantity = quantity;
+                        existingDetail.Frequency = frequency;
+                        existingDetail.IsDeleted = false;
+                        if (servicePrepDetail.Update(existingDetail, out string errUpdate))
+                        {
+                            MessageBox.Show("Medicine updated successfully.", 
+                                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Error updating medicine: {errUpdate}", 
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+
                 PrescriptionDetail newPrepDetail = new PrescriptionDetail
                 {
                     PrescriptionID = prepID,
@@ -54,13 +113,24 @@ namespace EF_Version.Presentation.Forms
                     Frequency = frequency,
                     IsDeleted = false
                 };
+
                 string err;
-                servicePrepDetail.Add(newPrepDetail, out err);
-                this.Close();
+                if (servicePrepDetail.Add(newPrepDetail, out err))
+                {
+                    MessageBox.Show("Medicine added successfully.", 
+                        "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show($"Error adding medicine: {err}", 
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"An error occurred: {ex.Message}", 
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EF_Version.Presentation;
 using EF_Version.Presentation.Usercontrol;
+using EF_Version.UI.Usercontrol;
 namespace EF_Version.Presentation.Forms
 {
     public partial class frmMain : Form
     {
+        string role;
+        int userid;
         private void InitializeDatabase()
         {
             using (var context = new ClinicContext())
@@ -54,6 +57,11 @@ namespace EF_Version.Presentation.Forms
         private void btn_Medicines_Click(object sender, EventArgs e)
         {
             AddUserControlToPanel(new uc_Medicine());
+        }
+
+        private void btn_DashBoard_Click(object sender, EventArgs e)
+        {
+            AddUserControlToPanel(new uc_DashBoard(role, userid));
         }
     }
 }

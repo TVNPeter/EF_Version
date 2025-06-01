@@ -31,12 +31,6 @@
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.dgv_Medication = new System.Windows.Forms.DataGridView();
-            this.PrescriptionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MedicineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MedicineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dosage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_AID = new System.Windows.Forms.TextBox();
             this.txt_Diagnosis = new System.Windows.Forms.TextBox();
             this.txt_Note = new System.Windows.Forms.TextBox();
@@ -48,6 +42,12 @@
             this.btn_AddMedicine = new System.Windows.Forms.Button();
             this.btn_RemoveMedicine = new System.Windows.Forms.Button();
             this.btn_Reload = new System.Windows.Forms.Button();
+            this.PrescriptionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MedicineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MedicineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dosage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Medication)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,36 +94,6 @@
             this.dgv_Medication.RowTemplate.Height = 24;
             this.dgv_Medication.Size = new System.Drawing.Size(1186, 577);
             this.dgv_Medication.TabIndex = 32;
-            // 
-            // PrescriptionID
-            // 
-            this.PrescriptionID.HeaderText = "PrescriptionID";
-            this.PrescriptionID.Name = "PrescriptionID";
-            // 
-            // MedicineID
-            // 
-            this.MedicineID.HeaderText = "MedicineID";
-            this.MedicineID.Name = "MedicineID";
-            // 
-            // MedicineName
-            // 
-            this.MedicineName.HeaderText = "MedicineName";
-            this.MedicineName.Name = "MedicineName";
-            // 
-            // Dosage
-            // 
-            this.Dosage.HeaderText = "Dosage";
-            this.Dosage.Name = "Dosage";
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            // 
-            // Frequency
-            // 
-            this.Frequency.HeaderText = "Frequency";
-            this.Frequency.Name = "Frequency";
             // 
             // txt_AID
             // 
@@ -243,6 +213,36 @@
             this.btn_Reload.UseVisualStyleBackColor = true;
             this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
             // 
+            // PrescriptionID
+            // 
+            this.PrescriptionID.HeaderText = "PrescriptionID";
+            this.PrescriptionID.Name = "PrescriptionID";
+            // 
+            // MedicineID
+            // 
+            this.MedicineID.HeaderText = "MedicineID";
+            this.MedicineID.Name = "MedicineID";
+            // 
+            // MedicineName
+            // 
+            this.MedicineName.HeaderText = "MedicineName";
+            this.MedicineName.Name = "MedicineName";
+            // 
+            // Dosage
+            // 
+            this.Dosage.HeaderText = "Dosage";
+            this.Dosage.Name = "Dosage";
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // Frequency
+            // 
+            this.Frequency.HeaderText = "Frequency";
+            this.Frequency.Name = "Frequency";
+            // 
             // frmPrescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -288,12 +288,12 @@
         private System.Windows.Forms.Label lb_note;
         private System.Windows.Forms.Button btn_AddMedicine;
         private System.Windows.Forms.Button btn_RemoveMedicine;
+        private System.Windows.Forms.Button btn_Reload;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrescriptionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedicineID;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedicineName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dosage;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frequency;
-        private System.Windows.Forms.Button btn_Reload;
     }
 }

@@ -1,0 +1,201 @@
+﻿namespace EF_Version.UI.Usercontrol
+{
+    partial class uc_DashBoard
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.label1 = new System.Windows.Forms.Label();
+            this.lb_doctor = new System.Windows.Forms.Label();
+            this.lb_fullname = new System.Windows.Forms.Label();
+            this.lb_speciality = new System.Windows.Forms.Label();
+            this.lbl_Phone = new System.Windows.Forms.Label();
+            this.lbl_ID = new System.Windows.Forms.Label();
+            this.lbl_Name = new System.Windows.Forms.Label();
+            this.lbl_Role = new System.Windows.Forms.Label();
+            this.lbl_Specialty = new System.Windows.Forms.Label();
+            this.lbl_S = new System.Windows.Forms.Label();
+            this.pb_Avatar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(136, 238);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 21);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "Phone:";
+            // 
+            // lb_doctor
+            // 
+            this.lb_doctor.AutoSize = true;
+            this.lb_doctor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_doctor.Location = new System.Drawing.Point(136, 139);
+            this.lb_doctor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_doctor.Name = "lb_doctor";
+            this.lb_doctor.Size = new System.Drawing.Size(31, 21);
+            this.lb_doctor.TabIndex = 58;
+            this.lb_doctor.Text = "ID:";
+            // 
+            // lb_fullname
+            // 
+            this.lb_fullname.AutoSize = true;
+            this.lb_fullname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_fullname.Location = new System.Drawing.Point(136, 173);
+            this.lb_fullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_fullname.Name = "lb_fullname";
+            this.lb_fullname.Size = new System.Drawing.Size(88, 21);
+            this.lb_fullname.TabIndex = 57;
+            this.lb_fullname.Text = "Full name:";
+            // 
+            // lb_speciality
+            // 
+            this.lb_speciality.AutoSize = true;
+            this.lb_speciality.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_speciality.Location = new System.Drawing.Point(136, 206);
+            this.lb_speciality.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_speciality.Name = "lb_speciality";
+            this.lb_speciality.Size = new System.Drawing.Size(47, 21);
+            this.lb_speciality.TabIndex = 56;
+            this.lb_speciality.Text = "Role:";
+            // 
+            // lbl_Phone
+            // 
+            this.lbl_Phone.AutoSize = true;
+            this.lbl_Phone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Phone.Location = new System.Drawing.Point(231, 238);
+            this.lbl_Phone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Phone.Name = "lbl_Phone";
+            this.lbl_Phone.Size = new System.Drawing.Size(72, 21);
+            this.lbl_Phone.TabIndex = 63;
+            this.lbl_Phone.Text = "{Phone}";
+            // 
+            // lbl_ID
+            // 
+            this.lbl_ID.AutoSize = true;
+            this.lbl_ID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ID.Location = new System.Drawing.Point(231, 139);
+            this.lbl_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ID.Name = "lbl_ID";
+            this.lbl_ID.Size = new System.Drawing.Size(40, 21);
+            this.lbl_ID.TabIndex = 62;
+            this.lbl_ID.Text = "{ID}";
+            // 
+            // lbl_Name
+            // 
+            this.lbl_Name.AutoSize = true;
+            this.lbl_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Name.Location = new System.Drawing.Point(231, 173);
+            this.lbl_Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Name.Name = "lbl_Name";
+            this.lbl_Name.Size = new System.Drawing.Size(71, 21);
+            this.lbl_Name.TabIndex = 61;
+            this.lbl_Name.Text = "{Name}";
+            // 
+            // lbl_Role
+            // 
+            this.lbl_Role.AutoSize = true;
+            this.lbl_Role.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Role.Location = new System.Drawing.Point(231, 206);
+            this.lbl_Role.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Role.Name = "lbl_Role";
+            this.lbl_Role.Size = new System.Drawing.Size(56, 21);
+            this.lbl_Role.TabIndex = 60;
+            this.lbl_Role.Text = "{Role}";
+            // 
+            // lbl_Specialty
+            // 
+            this.lbl_Specialty.AutoSize = true;
+            this.lbl_Specialty.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Specialty.Location = new System.Drawing.Point(231, 278);
+            this.lbl_Specialty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Specialty.Name = "lbl_Specialty";
+            this.lbl_Specialty.Size = new System.Drawing.Size(94, 21);
+            this.lbl_Specialty.TabIndex = 65;
+            this.lbl_Specialty.Text = "{Specialty}";
+            // 
+            // lbl_S
+            // 
+            this.lbl_S.AutoSize = true;
+            this.lbl_S.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_S.Location = new System.Drawing.Point(136, 278);
+            this.lbl_S.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_S.Name = "lbl_S";
+            this.lbl_S.Size = new System.Drawing.Size(85, 21);
+            this.lbl_S.TabIndex = 64;
+            this.lbl_S.Text = "Specialty:";
+            // 
+            // pb_Avatar
+            // 
+            this.pb_Avatar.Location = new System.Drawing.Point(808, 95);
+            this.pb_Avatar.Name = "pb_Avatar";
+            this.pb_Avatar.Size = new System.Drawing.Size(297, 411);
+            this.pb_Avatar.TabIndex = 67;
+            this.pb_Avatar.TabStop = false;
+            // 
+            // uc_DashBoard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pb_Avatar);
+            this.Controls.Add(this.lbl_Specialty);
+            this.Controls.Add(this.lbl_S);
+            this.Controls.Add(this.lbl_Phone);
+            this.Controls.Add(this.lbl_ID);
+            this.Controls.Add(this.lbl_Name);
+            this.Controls.Add(this.lbl_Role);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lb_doctor);
+            this.Controls.Add(this.lb_fullname);
+            this.Controls.Add(this.lb_speciality);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "uc_DashBoard";
+            this.Size = new System.Drawing.Size(1238, 846);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_doctor;
+        private System.Windows.Forms.Label lb_fullname;
+        private System.Windows.Forms.Label lb_speciality;
+        private System.Windows.Forms.Label lbl_Phone;
+        private System.Windows.Forms.Label lbl_ID;
+        private System.Windows.Forms.Label lbl_Name;
+        private System.Windows.Forms.Label lbl_Role;
+        private System.Windows.Forms.Label lbl_Specialty;
+        private System.Windows.Forms.Label lbl_S;
+        private System.Windows.Forms.PictureBox pb_Avatar;
+    }
+}

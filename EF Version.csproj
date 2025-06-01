@@ -84,6 +84,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Admin.cs" />
+    <Compile Include="Class\Account.cs" />
     <Compile Include="BLL\BLLAppointment.cs" />
     <Compile Include="BLL\BLLMedicine.cs" />
     <Compile Include="BLL\BLLPrescription.cs" />
@@ -103,7 +105,7 @@
     <Compile Include="DAL\DALPatient.cs" />
     <Compile Include="DAL\DALPrescription.cs" />
     <Compile Include="DAL\DALPrescriptionDetail.cs" />
-    <Compile Include="Class\Medication.cs" />
+    <Compile Include="Class\Secretary.cs" />
     <Compile Include="UI\Forms\frmAddMedicines.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +113,12 @@
       <DependentUpon>frmAddMedicines.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="UI\Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +136,12 @@
     </Compile>
     <Compile Include="UI\Usercontrol\uc_Appointment.Designer.cs">
       <DependentUpon>uc_Appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Usercontrol\uc_DashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Usercontrol\uc_DashBoard.Designer.cs">
+      <DependentUpon>uc_DashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Usercontrol\uc_Doctor.cs">
       <SubType>UserControl</SubType>
@@ -148,6 +162,15 @@
     <Compile Include="UI\Usercontrol\uc_Medicine.Designer.cs">
       <DependentUpon>uc_Medicine.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Usercontrol\uc_Secretary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Usercontrol\uc_Secretary.Designer.cs">
+      <DependentUpon>uc_Secretary.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Usercontrol\uc_Appointment.resx">
       <DependentUpon>uc_Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Usercontrol\uc_DashBoard.resx">
+      <DependentUpon>uc_DashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Usercontrol\uc_Doctor.resx">
       <DependentUpon>uc_Doctor.cs</DependentUpon>
@@ -173,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Usercontrol\uc_Medicine.resx">
       <DependentUpon>uc_Medicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Usercontrol\uc_Secretary.resx">
+      <DependentUpon>uc_Secretary.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
@@ -199,6 +228,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\healthcare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Admin\" />
+    <Folder Include="Resources\Doctor\" />
+    <Folder Include="Resources\Secretary\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
