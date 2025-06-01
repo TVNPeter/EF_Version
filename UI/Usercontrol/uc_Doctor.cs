@@ -14,6 +14,7 @@ namespace EF_Version.Presentation.Usercontrol
     public partial class uc_Doctor : UserControl
     {
         private BLLDoctor service = new BLLDoctor();
+        private BLLAccount accountService = new BLLAccount();
         private bool isAdd = false;
         private bool isEdit = false;
         string err;
@@ -65,9 +66,27 @@ namespace EF_Version.Presentation.Usercontrol
             {
                 try
                 {
-                    service.Add(doctor, out err);
-                    LoadData();
-                    MessageBox.Show("Doctor added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int newDoctorId;
+                    if (service.Add(doctor, out err, out newDoctorId))
+                    {
+                        string username = txt_Phone.Text.Trim();
+                        Account acc = new Account(username, txt_Phone.Text.Trim(), "Doctor", newDoctorId);
+
+                        if (accountService.AddAccount(acc, out err))
+                        {
+                            MessageBox.Show("Doctor and account added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Doctor added but failed to add account: {err}", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Failed to add doctor: {err}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -114,6 +133,13 @@ namespace EF_Version.Presentation.Usercontrol
             {
                 service.Delete(doctorId, out err);
                 LoadData();
+                if (!string.IsNullOrEmpty(err))
+                {
+                    MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                // Delete the associated account
+                accountService.DeleteAccount(txt_Phone.Text.Trim(), out err);
                 MessageBox.Show("Doctor deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

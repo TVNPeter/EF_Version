@@ -17,6 +17,9 @@ namespace EF_Version
         public virtual DbSet<Prescription> Prescriptions { get; set; }
         public virtual DbSet<PrescriptionDetail> PrescriptionDetails { get; set; }
         public virtual DbSet<Medicine> Medicines { get; set; }
+        public virtual DbSet<Secretary> Secretaries { get; set; }
+        public virtual DbSet<Admin> Admins { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<PrescriptionDetail>()

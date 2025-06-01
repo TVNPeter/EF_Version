@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EF_Version.Presentation.Forms;
+using EF_Version.UI.Forms;
 namespace EF_Version
 {
     internal static class Program
@@ -16,7 +17,7 @@ namespace EF_Version
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -43,9 +43,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2">
-      <HintPath>..\..\New folder\hospitalss\packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -84,6 +81,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLLAccount.cs" />
+    <Compile Include="BLL\BLLAdmin.cs" />
+    <Compile Include="BLL\BLLSecretary.cs" />
     <Compile Include="Class\Admin.cs" />
     <Compile Include="Class\Account.cs" />
     <Compile Include="BLL\BLLAppointment.cs" />
@@ -99,6 +99,8 @@
     <Compile Include="Class\Patient.cs" />
     <Compile Include="Class\Prescription.cs" />
     <Compile Include="Class\PrescriptionDetail.cs" />
+    <Compile Include="DAL\DALAccount.cs" />
+    <Compile Include="DAL\DALAdmin.cs" />
     <Compile Include="DAL\DALAppointment.cs" />
     <Compile Include="DAL\DALDoctor.cs" />
     <Compile Include="DAL\DALMedicine.cs" />
@@ -106,6 +108,16 @@
     <Compile Include="DAL\DALPrescription.cs" />
     <Compile Include="DAL\DALPrescriptionDetail.cs" />
     <Compile Include="Class\Secretary.cs" />
+    <Compile Include="DAL\DALSecretary.cs" />
+    <Compile Include="Class\PasswordHelper.cs" />
+    <Compile Include="DataSet\DSPrescription.cs">
+      <DependentUpon>DSPrescription.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSPrescription.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPrescription.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UI\Forms\frmAddMedicines.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +180,7 @@
     <Compile Include="UI\Usercontrol\uc_Secretary.Designer.cs">
       <DependentUpon>uc_Secretary.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\Prescription.rdlc" />
     <EmbeddedResource Include="UI\Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +217,17 @@
       <DependentUpon>uc_Secretary.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="DataSet\DSPrescription.xsc">
+      <DependentUpon>DSPrescription.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSPrescription.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPrescription.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSPrescription.xss">
+      <DependentUpon>DSPrescription.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -227,6 +251,8 @@
     <None Include="Resources\Glass.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\default.jpg" />
+    <Content Include="Resources\exitButton.png" />
     <Content Include="Resources\healthcare.png" />
   </ItemGroup>
   <ItemGroup>

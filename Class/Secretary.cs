@@ -16,7 +16,6 @@ namespace EF_Version
         public string FullName { get; set; }
         public string Phone { get; set; }
         public bool IsDeleted { get; set; } // Soft delete flag
-        public virtual ICollection<Appointment> Appointments { get; set; }
         // Constructor
         public Secretary() { }
         public Secretary(string fullName, string phone)

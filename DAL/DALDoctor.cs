@@ -9,6 +9,10 @@ namespace EF_Version.DAL
     internal class DALDoctor
     {
         private ClinicContext context = new ClinicContext();
+        public int GetLastDoctorId()
+        {
+            return context.Doctors.Any() ? context.Doctors.Max(d => d.DoctorID) : 0;
+        }
         public List<Doctor> GetDoctors()
         {
             return context.Doctors.Where(d => d.IsDeleted != true).ToList();
@@ -25,10 +29,11 @@ namespace EF_Version.DAL
         {
             return context.Doctors.Where(d => d.FullName.Contains(name) && d.IsDeleted != true).ToList();
         }
-        public void AddDoctor(Doctor doctor)
+        public int AddDoctor(Doctor doctor)
         {
             context.Doctors.Add(doctor);
             context.SaveChanges();
+            return doctor.DoctorID;
         }
         public void UpdateDoctor(Doctor doctor)
         {

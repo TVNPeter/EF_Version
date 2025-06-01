@@ -1,7 +1,104 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\ui\\usercontrol\\uc_doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\usercontrol\\uc_doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\ui\\usercontrol\\uc_secretary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\usercontrol\\uc_secretary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\dal\\dalaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:dal\\dalaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\bll\\blldoctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:bll\\blldoctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\bll\\bllsecretary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:bll\\bllsecretary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\dal\\daldoctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:dal\\daldoctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\ui\\usercontrol\\uc_secretary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\usercontrol\\uc_secretary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\dal\\dalsecretary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:dal\\dalsecretary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\ui\\usercontrol\\uc_doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\usercontrol\\uc_doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\bll\\bllaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:bll\\bllaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\class\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:class\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\ui\\usercontrol\\uc_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\usercontrol\\uc_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\ui\\usercontrol\\uc_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\usercontrol\\uc_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\ui\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\ui\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\dal\\daladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:dal\\daladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\bll\\blladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:bll\\blladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\ui\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\ui\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\class\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:class\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\class\\secretary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:class\\secretary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\class\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:class\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -32,8 +129,314 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DALAccount.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DAL\\DALAccount.cs",
+              "RelativeDocumentMoniker": "DAL\\DALAccount.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DAL\\DALAccount.cs",
+              "RelativeToolTip": "DAL\\DALAccount.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwCgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:22:54.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "uc_Secretary.cs [Design]",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_Secretary.cs",
+              "RelativeDocumentMoniker": "UI\\Usercontrol\\uc_Secretary.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_Secretary.cs [Design]",
+              "RelativeToolTip": "UI\\Usercontrol\\uc_Secretary.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:16:41.425Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "uc_Secretary.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_Secretary.cs",
+              "RelativeDocumentMoniker": "UI\\Usercontrol\\uc_Secretary.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_Secretary.cs",
+              "RelativeToolTip": "UI\\Usercontrol\\uc_Secretary.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAywHcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:18:55.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "uc_Doctor.cs [Design]",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_Doctor.cs",
+              "RelativeDocumentMoniker": "UI\\Usercontrol\\uc_Doctor.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_Doctor.cs [Design]",
+              "RelativeToolTip": "UI\\Usercontrol\\uc_Doctor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:35:45.522Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "uc_Doctor.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_Doctor.cs",
+              "RelativeDocumentMoniker": "UI\\Usercontrol\\uc_Doctor.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_Doctor.cs",
+              "RelativeToolTip": "UI\\Usercontrol\\uc_Doctor.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAUwEMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:35:47.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BLLAccount.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\BLL\\BLLAccount.cs",
+              "RelativeDocumentMoniker": "BLL\\BLLAccount.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\BLL\\BLLAccount.cs",
+              "RelativeToolTip": "BLL\\BLLAccount.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAxwEUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:33:51.824Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DALSecretary.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DAL\\DALSecretary.cs",
+              "RelativeDocumentMoniker": "DAL\\DALSecretary.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DAL\\DALSecretary.cs",
+              "RelativeToolTip": "DAL\\DALSecretary.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAArwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:13:49.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BLLSecretary.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\BLL\\BLLSecretary.cs",
+              "RelativeDocumentMoniker": "BLL\\BLLSecretary.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\BLL\\BLLSecretary.cs",
+              "RelativeToolTip": "BLL\\BLLSecretary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:13:27.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DALDoctor.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DAL\\DALDoctor.cs",
+              "RelativeDocumentMoniker": "DAL\\DALDoctor.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DAL\\DALDoctor.cs",
+              "RelativeToolTip": "DAL\\DALDoctor.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwB8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:38:31.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BLLDoctor.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\BLL\\BLLDoctor.cs",
+              "RelativeDocumentMoniker": "BLL\\BLLDoctor.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\BLL\\BLLDoctor.cs",
+              "RelativeToolTip": "BLL\\BLLDoctor.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAIAywBAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:39:06.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Account.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Class\\Account.cs",
+              "RelativeDocumentMoniker": "Class\\Account.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Class\\Account.cs",
+              "RelativeToolTip": "Class\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:29:35.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "uc_DashBoard.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_DashBoard.cs",
+              "RelativeDocumentMoniker": "UI\\Usercontrol\\uc_DashBoard.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_DashBoard.cs",
+              "RelativeToolTip": "UI\\Usercontrol\\uc_DashBoard.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvy4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:59:45.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "uc_DashBoard.cs [Design]",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_DashBoard.cs",
+              "RelativeDocumentMoniker": "UI\\Usercontrol\\uc_DashBoard.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_DashBoard.cs [Design]",
+              "RelativeToolTip": "UI\\Usercontrol\\uc_DashBoard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:59:40.709Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "Properties\\Resources.resx",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Properties\\Resources.resx",
+              "RelativeToolTip": "Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-01T08:12:03.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Forms\\frmMain.cs",
+              "RelativeDocumentMoniker": "UI\\Forms\\frmMain.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Forms\\frmMain.cs [Design]",
+              "RelativeToolTip": "UI\\Forms\\frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:20:21.354Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DALAdmin.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DAL\\DALAdmin.cs",
+              "RelativeDocumentMoniker": "DAL\\DALAdmin.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DAL\\DALAdmin.cs",
+              "RelativeToolTip": "DAL\\DALAdmin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:13:55.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BLLAdmin.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\BLL\\BLLAdmin.cs",
+              "RelativeDocumentMoniker": "BLL\\BLLAdmin.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\BLL\\BLLAdmin.cs",
+              "RelativeToolTip": "BLL\\BLLAdmin.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:13:38.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Forms\\frmLogin.cs",
+              "RelativeDocumentMoniker": "UI\\Forms\\frmLogin.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Forms\\frmLogin.cs",
+              "RelativeToolTip": "UI\\Forms\\frmLogin.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAxwC0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:22:24.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Forms\\frmLogin.cs",
+              "RelativeDocumentMoniker": "UI\\Forms\\frmLogin.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Forms\\frmLogin.cs [Design]",
+              "RelativeToolTip": "UI\\Forms\\frmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:22:22.431Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:58:31.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Class\\Appointment.cs",
+              "RelativeDocumentMoniker": "Class\\Appointment.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Class\\Appointment.cs",
+              "RelativeToolTip": "Class\\Appointment.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:53:43.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Forms\\frmMain.cs",
+              "RelativeDocumentMoniker": "UI\\Forms\\frmMain.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Forms\\frmMain.cs",
+              "RelativeToolTip": "UI\\Forms\\frmMain.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:20:22.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Secretary.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Class\\Secretary.cs",
+              "RelativeDocumentMoniker": "Class\\Secretary.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Class\\Secretary.cs",
+              "RelativeToolTip": "Class\\Secretary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:29:46.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Class\\Admin.cs",
+              "RelativeDocumentMoniker": "Class\\Admin.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Class\\Admin.cs",
+              "RelativeToolTip": "Class\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:29:42.112Z",
+              "EditorCaption": ""
             }
           ]
         }

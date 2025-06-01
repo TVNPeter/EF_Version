@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnl = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_Hello = new System.Windows.Forms.Label();
             this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,7 +57,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel1.Controls.Add(this.lbl_Hello);
             this.panel1.Controls.Add(this.pb_Exit);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -67,17 +65,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1238, 77);
             this.panel1.TabIndex = 3;
-            // 
-            // lbl_Hello
-            // 
-            this.lbl_Hello.AutoSize = true;
-            this.lbl_Hello.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Hello.Location = new System.Drawing.Point(820, 23);
-            this.lbl_Hello.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Hello.Name = "lbl_Hello";
-            this.lbl_Hello.Size = new System.Drawing.Size(47, 21);
-            this.lbl_Hello.TabIndex = 25;
-            this.lbl_Hello.Text = "Hello";
             // 
             // pb_Exit
             // 
@@ -193,6 +180,7 @@
             this.btn_Secretary.TabIndex = 2;
             this.btn_Secretary.Text = "Secretary";
             this.btn_Secretary.UseVisualStyleBackColor = true;
+            this.btn_Secretary.Click += new System.EventHandler(this.btn_Secretary_Click);
             // 
             // frmMain
             // 
@@ -232,7 +220,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pb_Exit;
-        private System.Windows.Forms.Label lbl_Hello;
         private System.Windows.Forms.Button btn_Medicines;
         private System.Windows.Forms.Button btn_DashBoard;
         private System.Windows.Forms.Button btn_Secretary;

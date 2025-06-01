@@ -21,8 +21,6 @@ namespace EF_Version
         public string Password { get; set; }
         public string Role { get; set; }
         public int UserId { get; set; }
-        public virtual Doctor Doctor { get; set; } // Navigation property for Doctor
-        public virtual Secretary Secretary { get; set; } // Navigation property for Secretary
-        public virtual Admin Admin { get; set; } // Navigation property for Admin
+        public bool IsDeleted { get; set; } // Soft delete flag
     }
 }

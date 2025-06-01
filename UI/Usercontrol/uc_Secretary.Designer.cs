@@ -39,17 +39,17 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.pb_FindByName = new System.Windows.Forms.PictureBox();
             this.pb_FindById = new System.Windows.Forms.PictureBox();
-            this.dgv_Secretary = new System.Windows.Forms.DataGridView();
+            this.dgv_Secretaries = new System.Windows.Forms.DataGridView();
+            this.SecretaryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.txt_SID = new System.Windows.Forms.TextBox();
             this.lb_doctor = new System.Windows.Forms.Label();
             this.lb_fullname = new System.Windows.Forms.Label();
-            this.SecretaryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pb_FindByName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_FindById)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Secretary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Secretaries)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_Phone
@@ -82,6 +82,7 @@
             this.btn_Reload.TabIndex = 72;
             this.btn_Reload.Text = "Reload";
             this.btn_Reload.UseVisualStyleBackColor = true;
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
             // 
             // btn_Delete
             // 
@@ -94,6 +95,7 @@
             this.btn_Delete.TabIndex = 71;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Save
             // 
@@ -106,6 +108,7 @@
             this.btn_Save.TabIndex = 70;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Cancel
             // 
@@ -117,6 +120,7 @@
             this.btn_Cancel.TabIndex = 69;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Edit
             // 
@@ -129,6 +133,7 @@
             this.btn_Edit.TabIndex = 68;
             this.btn_Edit.Text = "Edit";
             this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // btn_Add
             // 
@@ -141,6 +146,7 @@
             this.btn_Add.TabIndex = 67;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // pb_FindByName
             // 
@@ -152,6 +158,7 @@
             this.pb_FindByName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_FindByName.TabIndex = 66;
             this.pb_FindByName.TabStop = false;
+            this.pb_FindByName.Click += new System.EventHandler(this.pb_FindByName_Click);
             // 
             // pb_FindById
             // 
@@ -163,21 +170,37 @@
             this.pb_FindById.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_FindById.TabIndex = 64;
             this.pb_FindById.TabStop = false;
+            this.pb_FindById.Click += new System.EventHandler(this.pb_FindBySID_Click);
             // 
-            // dgv_Secretary
+            // dgv_Secretaries
             // 
-            this.dgv_Secretary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Secretary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_Secretaries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Secretaries.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SecretaryID,
             this.FullName,
             this.Phone});
-            this.dgv_Secretary.Location = new System.Drawing.Point(328, 310);
-            this.dgv_Secretary.Margin = new System.Windows.Forms.Padding(2);
-            this.dgv_Secretary.Name = "dgv_Secretary";
-            this.dgv_Secretary.RowHeadersWidth = 51;
-            this.dgv_Secretary.RowTemplate.Height = 24;
-            this.dgv_Secretary.Size = new System.Drawing.Size(557, 275);
-            this.dgv_Secretary.TabIndex = 63;
+            this.dgv_Secretaries.Location = new System.Drawing.Point(328, 310);
+            this.dgv_Secretaries.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Secretaries.Name = "dgv_Secretaries";
+            this.dgv_Secretaries.RowHeadersWidth = 51;
+            this.dgv_Secretaries.RowTemplate.Height = 24;
+            this.dgv_Secretaries.Size = new System.Drawing.Size(557, 275);
+            this.dgv_Secretaries.TabIndex = 63;
+            // 
+            // SecretaryID
+            // 
+            this.SecretaryID.HeaderText = "SecretaryID";
+            this.SecretaryID.Name = "SecretaryID";
+            // 
+            // FullName
+            // 
+            this.FullName.HeaderText = "Name";
+            this.FullName.Name = "FullName";
+            // 
+            // Phone
+            // 
+            this.Phone.HeaderText = "Phone";
+            this.Phone.Name = "Phone";
             // 
             // txt_Name
             // 
@@ -219,21 +242,6 @@
             this.lb_fullname.TabIndex = 58;
             this.lb_fullname.Text = "Full name:";
             // 
-            // SecretaryID
-            // 
-            this.SecretaryID.HeaderText = "SecretaryID";
-            this.SecretaryID.Name = "SecretaryID";
-            // 
-            // FullName
-            // 
-            this.FullName.HeaderText = "Name";
-            this.FullName.Name = "FullName";
-            // 
-            // Phone
-            // 
-            this.Phone.HeaderText = "Phone";
-            this.Phone.Name = "Phone";
-            // 
             // uc_Secretary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -248,16 +256,17 @@
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.pb_FindByName);
             this.Controls.Add(this.pb_FindById);
-            this.Controls.Add(this.dgv_Secretary);
+            this.Controls.Add(this.dgv_Secretaries);
             this.Controls.Add(this.txt_Name);
             this.Controls.Add(this.txt_SID);
             this.Controls.Add(this.lb_doctor);
             this.Controls.Add(this.lb_fullname);
             this.Name = "uc_Secretary";
             this.Size = new System.Drawing.Size(1238, 846);
+            this.Load += new System.EventHandler(this.uc_Secretary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_FindByName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_FindById)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Secretary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Secretaries)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,7 +284,7 @@
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.PictureBox pb_FindByName;
         private System.Windows.Forms.PictureBox pb_FindById;
-        private System.Windows.Forms.DataGridView dgv_Secretary;
+        private System.Windows.Forms.DataGridView dgv_Secretaries;
         private System.Windows.Forms.DataGridViewTextBoxColumn SecretaryID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;

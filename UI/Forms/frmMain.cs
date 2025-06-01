@@ -28,6 +28,29 @@ namespace EF_Version.Presentation.Forms
             InitializeComponent();
             InitializeDatabase(); // Call the method to initialize the database
         }
+        public frmMain(string role, int userid) : this()
+        {
+            this.role = role;
+            this.userid = userid;
+            AddUserControlToPanel(new uc_DashBoard(role, userid));
+            if(role == "Doctor")
+            {
+                btn_Secretary.Enabled = false;
+                btn_Doctor.Enabled = false;
+                btn_Patients.Enabled = false;
+            }
+            else if(role == "Secretary")
+            {
+                btn_Secretary.Enabled = false;
+                btn_Doctor.Enabled = false;
+            }
+            else if(role == "Admin")
+            {
+                btn_Medicines.Enabled = false;
+                btn_Patients.Enabled = false;
+                btn_Appointments.Enabled = false;
+            }
+        }
         private void AddUserControlToPanel(UserControl userControl)
         {
             pnl.Controls.Clear();
@@ -62,6 +85,11 @@ namespace EF_Version.Presentation.Forms
         private void btn_DashBoard_Click(object sender, EventArgs e)
         {
             AddUserControlToPanel(new uc_DashBoard(role, userid));
+        }
+
+        private void btn_Secretary_Click(object sender, EventArgs e)
+        {
+            AddUserControlToPanel(new uc_Secretary());
         }
     }
 }

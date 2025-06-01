@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EF_Version.DAL;
+
 namespace EF_Version.BLL
 {
-    internal class BLLDoctor
+    internal class BLLSecretary
     {
-        DALDoctor repo = new DALDoctor();
-        public int GetLastDoctorId()
+        DAL.DALSecretary repo = new DAL.DALSecretary();
+        public int GetLastSecretaryId()
         {
-            return repo.GetLastDoctorId();
+            return repo.GetSecretaries().Any() ? repo.GetSecretaries().Max(s => s.SecretaryID) : 0;
         }
-        public bool Add(Doctor d, out string err, out int newId)
+        public bool Add(Secretary s, out string err, out int newId)
         {
             try
             {
-                newId = repo.AddDoctor(d);
+                newId = repo.AddSecretary(s);
                 err = string.Empty;
                 return true;
             }
@@ -28,11 +28,12 @@ namespace EF_Version.BLL
                 return false;
             }
         }
-        public bool Update(Doctor d, out string err)
+
+        public bool Update(Secretary s, out string err)
         {
             try
             {
-                repo.UpdateDoctor(d);
+                repo.UpdateSecretary(s);
                 err = string.Empty;
                 return true;
             }
@@ -42,11 +43,12 @@ namespace EF_Version.BLL
                 return false;
             }
         }
+
         public bool Delete(int id, out string err)
         {
             try
             {
-                repo.DeleteDoctor(id);
+                repo.DeleteSecretary(id);
                 err = string.Empty;
                 return true;
             }
@@ -56,12 +58,27 @@ namespace EF_Version.BLL
                 return false;
             }
         }
-        public List<Doctor> GetAll(out string err)
+
+        public List<Secretary> GetAll(out string err)
         {
             try
             {
                 err = string.Empty;
-                return repo.GetDoctors();
+                return repo.GetSecretaries();
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return new List<Secretary>();
+            }
+        }
+
+        public Secretary GetById(int id, out string err)
+        {
+            try
+            {
+                err = string.Empty;
+                return repo.GetSecretaryById(id);
             }
             catch (Exception ex)
             {
@@ -69,43 +86,18 @@ namespace EF_Version.BLL
                 return null;
             }
         }
-        public Doctor GetById(int id, out string err)
+
+        public List<Secretary> GetByName(string name, out string err)
         {
             try
             {
                 err = string.Empty;
-                return repo.GetDoctorById(id);
+                return repo.GetSecretariesByName(name);
             }
             catch (Exception ex)
             {
                 err = ex.Message;
-                return null;
-            }
-        }
-        public List<Doctor> GetBySpecialty(string specialty, out string err)
-        {
-            try
-            {
-                err = string.Empty;
-                return repo.GetDoctorsBySpecialty(specialty);
-            }
-            catch (Exception ex)
-            {
-                err = ex.Message;
-                return null;
-            }
-        }
-        public List<Doctor> GetByName(string name, out string err)
-        {
-            try
-            {
-                err = string.Empty;
-                return repo.GetDoctorsByName(name);
-            }
-            catch (Exception ex)
-            {
-                err = ex.Message;
-                return null;
+                return new List<Secretary>();
             }
         }
     }

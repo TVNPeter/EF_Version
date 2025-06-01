@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_P = new System.Windows.Forms.Label();
             this.lb_doctor = new System.Windows.Forms.Label();
             this.lb_fullname = new System.Windows.Forms.Label();
             this.lb_speciality = new System.Windows.Forms.Label();
@@ -42,16 +42,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_P
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 238);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 21);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Phone:";
+            this.lbl_P.AutoSize = true;
+            this.lbl_P.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_P.Location = new System.Drawing.Point(136, 238);
+            this.lbl_P.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_P.Name = "lbl_P";
+            this.lbl_P.Size = new System.Drawing.Size(63, 21);
+            this.lbl_P.TabIndex = 59;
+            this.lbl_P.Text = "Phone:";
             // 
             // lb_doctor
             // 
@@ -154,9 +154,11 @@
             // 
             // pb_Avatar
             // 
+            this.pb_Avatar.Image = global::EF_Version.Properties.Resources._default;
             this.pb_Avatar.Location = new System.Drawing.Point(808, 95);
             this.pb_Avatar.Name = "pb_Avatar";
             this.pb_Avatar.Size = new System.Drawing.Size(297, 411);
+            this.pb_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Avatar.TabIndex = 67;
             this.pb_Avatar.TabStop = false;
             // 
@@ -171,7 +173,7 @@
             this.Controls.Add(this.lbl_ID);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.lbl_Role);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_P);
             this.Controls.Add(this.lb_doctor);
             this.Controls.Add(this.lb_fullname);
             this.Controls.Add(this.lb_speciality);
@@ -186,7 +188,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_P;
         private System.Windows.Forms.Label lb_doctor;
         private System.Windows.Forms.Label lb_fullname;
         private System.Windows.Forms.Label lb_speciality;
