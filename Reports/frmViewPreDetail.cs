@@ -25,6 +25,8 @@ namespace EF_Version.Reports
 
         private void frmViewPreDetail_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.DataForPrescriptionDetail' table. You can move, or remove it, as needed.
+            this.dataForPrescriptionDetailTableAdapter.Fill(this.dataSet1.DataForPrescriptionDetail, ID);
 
             this.reportViewer1.RefreshReport();
         }

@@ -2587,6 +2587,8 @@ namespace EF_Version.DataSet {
             
             private global::System.Data.DataColumn columnPrice;
             
+            private global::System.Data.DataColumn columnPrescriptionID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public DataForPrescriptionDetailDataTable() {
@@ -2726,6 +2728,14 @@ namespace EF_Version.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PrescriptionIDColumn {
+                get {
+                    return this.columnPrescriptionID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2776,10 +2786,18 @@ namespace EF_Version.DataSet {
                         Dosage,
                         Quantity,
                         Frequency,
-                        Price};
+                        Price,
+                        null};
                 rowDataForPrescriptionDetailRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataForPrescriptionDetailRow);
                 return rowDataForPrescriptionDetailRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public DataForPrescriptionDetailRow FindByPrescriptionID(int PrescriptionID) {
+                return ((DataForPrescriptionDetailRow)(this.Rows.Find(new object[] {
+                            PrescriptionID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2812,6 +2830,7 @@ namespace EF_Version.DataSet {
                 this.columnQuantity = base.Columns["Quantity"];
                 this.columnFrequency = base.Columns["Frequency"];
                 this.columnPrice = base.Columns["Price"];
+                this.columnPrescriptionID = base.Columns["PrescriptionID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2843,6 +2862,10 @@ namespace EF_Version.DataSet {
                 base.Columns.Add(this.columnFrequency);
                 this.columnPrice = new global::System.Data.DataColumn("Price", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
+                this.columnPrescriptionID = new global::System.Data.DataColumn("PrescriptionID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrescriptionID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnPrescriptionID}, true));
                 this.columnDoctorName.AllowDBNull = false;
                 this.columnDoctorName.MaxLength = 2147483647;
                 this.columnPatientName.AllowDBNull = false;
@@ -2859,6 +2882,12 @@ namespace EF_Version.DataSet {
                 this.columnQuantity.AllowDBNull = false;
                 this.columnFrequency.MaxLength = 2147483647;
                 this.columnPrice.AllowDBNull = false;
+                this.columnPrescriptionID.AutoIncrement = true;
+                this.columnPrescriptionID.AutoIncrementSeed = -1;
+                this.columnPrescriptionID.AutoIncrementStep = -1;
+                this.columnPrescriptionID.AllowDBNull = false;
+                this.columnPrescriptionID.ReadOnly = true;
+                this.columnPrescriptionID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3964,6 +3993,17 @@ namespace EF_Version.DataSet {
                 }
                 set {
                     this[this.tableDataForPrescriptionDetail.PriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int PrescriptionID {
+                get {
+                    return ((int)(this[this.tableDataForPrescriptionDetail.PrescriptionIDColumn]));
+                }
+                set {
+                    this[this.tableDataForPrescriptionDetail.PrescriptionIDColumn] = value;
                 }
             }
             
@@ -6534,6 +6574,7 @@ SELECT MedicineID, Name, Dosage, Price, IsDeleted FROM Medicines WHERE (Medicine
             tableMapping.ColumnMappings.Add("Quantity", "Quantity");
             tableMapping.ColumnMappings.Add("Frequency", "Frequency");
             tableMapping.ColumnMappings.Add("Price", "Price");
+            tableMapping.ColumnMappings.Add("PrescriptionID", "PrescriptionID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6551,6 +6592,7 @@ SELECT MedicineID, Name, Dosage, Price, IsDeleted FROM Medicines WHERE (Medicine
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT 
+    pr.PrescriptionID,
     d.FullName AS DoctorName,
     p.FullName AS PatientName,
     p.Gender,

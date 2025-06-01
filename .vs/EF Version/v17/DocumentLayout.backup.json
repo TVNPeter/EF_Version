@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\ui\\forms\\frmprescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\forms\\frmprescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\reports\\frmviewpredetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:reports\\frmviewpredetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\reports\\frmviewpredetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\reports\\frmviewpredetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:reports\\frmviewpredetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\reports\\rpviewpredetails.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
-      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:reports\\rpviewpredetails.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\reports\\frmviewpredetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:reports\\frmviewpredetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\reports\\reportviewpredetail.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:reports\\reportviewpredetail.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\dataset\\dataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:dataset\\dataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\ui\\usercontrol\\uc_appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\usercontrol\\uc_appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,20 +31,16 @@
       "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:class\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|e:\\2024-2025-hkii\\wipr\\final term project\\ef version\\ui\\forms\\frmprescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\forms\\frmprescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\reports\\frmviewpredetail.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:reports\\frmviewpredetail.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\ui\\forms\\frmprescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\forms\\frmprescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\ui\\usercontrol\\uc_appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:ui\\usercontrol\\uc_appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\dataset\\dataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
-      "RelativeMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|solutionrelative:dataset\\dataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E462E88-121B-40B0-B1F0-99A2FC680932}|EF Version.csproj|E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\dal\\dalprescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,8 +86,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataSet1.xsd",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DataSet\\DataSet1.xsd",
+              "RelativeDocumentMoniker": "DataSet\\DataSet1.xsd",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DataSet\\DataSet1.xsd",
+              "RelativeToolTip": "DataSet\\DataSet1.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2025-06-01T15:22:43.315Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
@@ -110,44 +123,48 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReportViewPreDetail.rdlc [Design]",
+              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\ReportViewPreDetail.rdlc",
+              "RelativeDocumentMoniker": "Reports\\ReportViewPreDetail.rdlc",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\ReportViewPreDetail.rdlc [Design]",
+              "RelativeToolTip": "Reports\\ReportViewPreDetail.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2025-06-01T15:45:22.431Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "frmViewPreDetail.cs",
               "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\frmViewPreDetail.cs",
               "RelativeDocumentMoniker": "Reports\\frmViewPreDetail.cs",
-              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\frmViewPreDetail.cs",
-              "RelativeToolTip": "Reports\\frmViewPreDetail.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwvxgAAAAAAAAAAAAAAA==",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\frmViewPreDetail.cs*",
+              "RelativeToolTip": "Reports\\frmViewPreDetail.cs*",
+              "ViewState": "AgIAAAQAAAAAAAAAAIA2wBYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T15:31:29.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "frmViewPreDetail.cs [Design]",
               "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\frmViewPreDetail.cs",
               "RelativeDocumentMoniker": "Reports\\frmViewPreDetail.cs",
-              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\frmViewPreDetail.cs [Design]",
-              "RelativeToolTip": "Reports\\frmViewPreDetail.cs [Design]",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\frmViewPreDetail.cs [Design]*",
+              "RelativeToolTip": "Reports\\frmViewPreDetail.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T15:27:58.475Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RpViewPreDetails.rdlc [Design]",
-              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\RpViewPreDetails.rdlc",
-              "RelativeDocumentMoniker": "Reports\\RpViewPreDetails.rdlc",
-              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\RpViewPreDetails.rdlc [Design]*",
-              "RelativeToolTip": "Reports\\RpViewPreDetails.rdlc [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2025-06-01T14:47:38.073Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Prescription.cs",
               "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Class\\Prescription.cs",
               "RelativeDocumentMoniker": "Class\\Prescription.cs",
@@ -160,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -173,18 +190,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "uc_Appointment.cs [Design]",
               "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_Appointment.cs",
               "RelativeDocumentMoniker": "UI\\Usercontrol\\uc_Appointment.cs",
               "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Usercontrol\\uc_Appointment.cs [Design]",
               "RelativeToolTip": "UI\\Usercontrol\\uc_Appointment.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T13:21:30.238Z"
+              "WhenOpened": "2025-06-01T13:21:30.238Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "frmPrescription.cs",
               "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Forms\\frmPrescription.cs",
               "RelativeDocumentMoniker": "UI\\Forms\\frmPrescription.cs",
@@ -197,44 +215,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "frmViewPreDetail.Designer.cs",
               "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\frmViewPreDetail.Designer.cs",
               "RelativeDocumentMoniker": "Reports\\frmViewPreDetail.Designer.cs",
-              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\frmViewPreDetail.Designer.cs",
-              "RelativeToolTip": "Reports\\frmViewPreDetail.Designer.cs",
+              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\Reports\\frmViewPreDetail.Designer.cs*",
+              "RelativeToolTip": "Reports\\frmViewPreDetail.Designer.cs*",
               "ViewState": "AgIAAC0AAAAAAAAAAAAjwDwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T15:29:21.085Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "frmPrescription.cs [Design]",
               "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Forms\\frmPrescription.cs",
               "RelativeDocumentMoniker": "UI\\Forms\\frmPrescription.cs",
               "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\UI\\Forms\\frmPrescription.cs [Design]",
               "RelativeToolTip": "UI\\Forms\\frmPrescription.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T12:40:13.748Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DataSet1.xsd",
-              "DocumentMoniker": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DataSet\\DataSet1.xsd",
-              "RelativeDocumentMoniker": "DataSet\\DataSet1.xsd",
-              "ToolTip": "E:\\2024-2025-HKII\\WIPR\\Final Term Project\\EF Version\\DataSet\\DataSet1.xsd",
-              "RelativeToolTip": "DataSet\\DataSet1.xsd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2025-06-01T15:22:43.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T12:40:13.748Z"
             },
             {
               "$type": "Document",
@@ -270,7 +271,8 @@
               "RelativeToolTip": "UI\\Usercontrol\\uc_Appointment.cs",
               "ViewState": "AgIAAPQAAAAAAAAAAAAcwBMBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T12:48:06.799Z"
+              "WhenOpened": "2025-06-01T12:48:06.799Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

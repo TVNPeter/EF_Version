@@ -188,7 +188,7 @@
     <EmbeddedResource Include="Reports\frmViewPreDetail.resx">
       <DependentUpon>frmViewPreDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RpViewPreDetails.rdlc" />
+    <EmbeddedResource Include="Reports\ReportViewPreDetail.rdlc" />
     <EmbeddedResource Include="UI\Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

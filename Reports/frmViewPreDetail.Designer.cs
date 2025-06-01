@@ -31,39 +31,46 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSet1 = new EF_Version.DataSet.DataSet1();
             this.dataForPrescriptionDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new EF_Version.DataSet.DataSet1();
             this.dataForPrescriptionDetailTableAdapter = new EF_Version.DataSet.DataSet1TableAdapters.DataForPrescriptionDetailTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            this.dataForPrescriptionDetailBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataForPrescriptionDetailBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataForPrescriptionDetailBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.dataForPrescriptionDetailBindingSource;
+            reportDataSource1.Value = this.dataForPrescriptionDetailBindingSource1;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "EF_Version.Reports.RpViewPreDetails.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "EF_Version.Reports.ReportViewPreDetail.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataForPrescriptionDetailBindingSource
             // 
             this.dataForPrescriptionDetailBindingSource.DataMember = "DataForPrescriptionDetail";
             this.dataForPrescriptionDetailBindingSource.DataSource = this.dataSet1;
             // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataForPrescriptionDetailTableAdapter
             // 
             this.dataForPrescriptionDetailTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataForPrescriptionDetailBindingSource1
+            // 
+            this.dataForPrescriptionDetailBindingSource1.DataMember = "DataForPrescriptionDetail";
+            this.dataForPrescriptionDetailBindingSource1.DataSource = this.dataSet1;
             // 
             // frmViewPreDetail
             // 
@@ -74,8 +81,9 @@
             this.Name = "frmViewPreDetail";
             this.Text = "frmViewPreDetail";
             this.Load += new System.EventHandler(this.frmViewPreDetail_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataForPrescriptionDetailBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataForPrescriptionDetailBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -86,5 +94,6 @@
         private System.Windows.Forms.BindingSource dataForPrescriptionDetailBindingSource;
         private DataSet.DataSet1 dataSet1;
         private DataSet.DataSet1TableAdapters.DataForPrescriptionDetailTableAdapter dataForPrescriptionDetailTableAdapter;
+        private System.Windows.Forms.BindingSource dataForPrescriptionDetailBindingSource1;
     }
 }
