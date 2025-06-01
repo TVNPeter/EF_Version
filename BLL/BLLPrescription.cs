@@ -64,5 +64,18 @@ namespace EF_Version.BLL
                 return null;
             }
         }
+        public Prescription GetByAppointmentId(int appointmentId, out string err)
+        {
+            try
+            {
+                err = string.Empty;
+                return repo.GetPrescriptionsByAppointmentId(appointmentId);
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return null;
+            }
+        }
     }
 }

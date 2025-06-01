@@ -103,6 +103,7 @@
     <Compile Include="DAL\DALPatient.cs" />
     <Compile Include="DAL\DALPrescription.cs" />
     <Compile Include="DAL\DALPrescriptionDetail.cs" />
+    <Compile Include="Class\Medication.cs" />
     <Compile Include="UI\Forms\frmAddMedicines.cs">
       <SubType>Form</SubType>
     </Compile>

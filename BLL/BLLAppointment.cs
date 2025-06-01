@@ -95,7 +95,9 @@ namespace EF_Version.BLL
             try
             {
                 err = string.Empty;
-                return repo.GetAppointmentsByDate(date);
+                var appointments = repo.GetAppointmentsByDate(date);
+
+                return appointments.OrderBy(a => a.AppointmentDate).ToList();
             }
             catch (Exception ex)
             {

@@ -1,4 +1,5 @@
 ﻿using EF_Version.BLL;
+using EF_Version.Presentation.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -124,6 +125,9 @@ namespace EF_Version.Presentation.Usercontrol
             LoadData();
             LoadComboBoxes();
         }
+
+        #endregion
+        #region Search Methods 
         private void pb_FindByAID_Click(object sender, EventArgs e)
         {
             Appointment appointment = service.GetByID(Int32.Parse(txt_AID.Text), out err);
@@ -144,8 +148,6 @@ namespace EF_Version.Presentation.Usercontrol
                 dgv_Appointments.DataSource = data;
             }
         }
-        #endregion
-        #region Search Methods 
         private void pb_FindByPID_Click(object sender, EventArgs e)
         {
             data = service.GetByPatientID(Convert.ToInt32(cb_PID.SelectedValue), out err);
@@ -170,7 +172,6 @@ namespace EF_Version.Presentation.Usercontrol
         {
             try
             {
-                // Lấy danh sách các cuộc hẹn theo ngày từ dTP_AD.Value
                 data = service.GetByDate(dTP_AD.Value, out err);
                 
                 if (!string.IsNullOrEmpty(err))
@@ -179,10 +180,9 @@ namespace EF_Version.Presentation.Usercontrol
                     return;
                 }
                 
-                // Cập nhật DataGridView với dữ liệu mới
                 dgv_Appointments.DataSource = data;
                 
-                // Hiển thị thông báo nếu không tìm thấy cuộc hẹn nàoif (data == null || data.Count == 0)
+                if (data == null || data.Count == 0)
                 {
                     MessageBox.Show($"No appointments found for {dTP_AD.Value.ToShortDateString()}.", 
                         "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -240,7 +240,6 @@ namespace EF_Version.Presentation.Usercontrol
 
             txt_AID.Text = dgv_Appointments.Rows[r].Cells[0].Value.ToString();
             dTP_AD.Value = Convert.ToDateTime(dgv_Appointments.Rows[r].Cells[1].Value);
-            cb_Status.Text = dgv_Appointments.Rows[r].Cells[2].Value.ToString();
             cb_DID.Text = dgv_Appointments.Rows[r].Cells[3].Value.ToString();
             cb_PID.Text = dgv_Appointments.Rows[r].Cells[4].Value.ToString();
         }
@@ -265,6 +264,12 @@ namespace EF_Version.Presentation.Usercontrol
             {
                 dgv_Appointments.DataSource = data;
             }
+        }
+
+        private void btn_EditPrescription_Click(object sender, EventArgs e)
+        {
+            frmPrescription prescriptionForm = new frmPrescription(Convert.ToInt32(txt_AID.Text));
+            prescriptionForm.ShowDialog();
         }
     }
 }

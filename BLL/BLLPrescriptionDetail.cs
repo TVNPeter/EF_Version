@@ -8,5 +8,77 @@ namespace EF_Version.BLL
 {
     internal class BLLPrescriptionDetail
     {
+        ClinicContext db = new ClinicContext();
+        public List<PrescriptionDetail> GetByPrescriptionId(int prescriptionId, out string err)
+        {
+            err = string.Empty;
+            try
+            {
+                return db.PrescriptionDetails.Where(pd => pd.PrescriptionID == prescriptionId).ToList();
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return new List<PrescriptionDetail>();
+            }
+        }
+        public bool Add(PrescriptionDetail detail, out string err)
+        {
+            err = string.Empty;
+            try
+            {
+                db.PrescriptionDetails.Add(detail);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return false;
+            }
+        }
+        public bool Update(PrescriptionDetail detail, out string err)
+        {
+            err = string.Empty;
+            try
+            {
+                var existingDetail = db.PrescriptionDetails.Find(detail.PrescriptionID, detail.MedicineID);
+                if (existingDetail == null)
+                {
+                    err = "Prescription detail not found.";
+                    return false;
+                }
+                existingDetail.Quantity = detail.Quantity;
+                existingDetail.Frequency = detail.Frequency;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return false;
+            }
+        }
+        public bool Delete(int prescriptionId, int medicineId, out string err)
+        {
+            err = string.Empty;
+            try
+            {
+                var detail = db.PrescriptionDetails.Find(prescriptionId, medicineId);
+                if (detail == null)
+                {
+                    err = "Prescription detail not found.";
+                    return false;
+                }
+                detail.IsDeleted = true; // Soft delete
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                err = ex.Message;
+                return false;
+            }
+        }
     }
 }

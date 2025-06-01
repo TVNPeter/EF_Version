@@ -42,5 +42,12 @@
       <FileName>Class\Medicine.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="EF_Version.Medication">
+    <Position X="9" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAIAAAAAAAAIQAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Medication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

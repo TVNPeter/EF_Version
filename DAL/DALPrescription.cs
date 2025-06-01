@@ -13,6 +13,10 @@ namespace EF_Version.DAL
         {
             return context.Prescriptions.FirstOrDefault(p => p.PrescriptionID == id && p.IsDeleted != true);
         }
+        public Prescription GetPrescriptionsByAppointmentId(int appointmentId)
+        {
+            return context.Prescriptions.FirstOrDefault(p => p.AppointmentID == appointmentId && p.IsDeleted != true);
+        }
         public void AddPrescription(Prescription prescription)
         {
             if (prescription == null) throw new ArgumentNullException(nameof(prescription));

@@ -27,11 +27,27 @@ namespace EF_Version.DAL
         }
         public List<Appointment> GetAppointmentsByDate(DateTime date)
         {
-            return context.Appointments.Where(a => a.AppointmentDate.Date == date.Date && a.IsDeleted != true).ToList();
+            // Tính toán thời gian bắt đầu và kết thúc của ngày
+            DateTime startDate = new DateTime(date.Year, date.Month, date.Day, 0, 0, 0);
+            DateTime endDate = new DateTime(date.Year, date.Month, date.Day, 23, 59, 59);
+            
+            return context.Appointments
+                .Where(a => a.AppointmentDate >= startDate && 
+                            a.AppointmentDate <= endDate && 
+                            a.IsDeleted != true)
+                .ToList();
         }
         public void AddAppointment(Appointment appointment)
         {
             context.Appointments.Add(appointment);
+            context.Prescriptions.Add(new Prescription
+            {
+                AppointmentID = appointment.AppointmentID,
+                DateIssued = DateTime.Now,
+                Notes = "",
+                Diagnosis = "",
+                IsDeleted = false
+            });
             context.SaveChanges();
         }
         public void UpdateAppointment(Appointment appointment)

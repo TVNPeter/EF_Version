@@ -65,10 +65,10 @@
             // 
             this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Delete.ForeColor = System.Drawing.Color.Red;
-            this.btn_Delete.Location = new System.Drawing.Point(519, 374);
-            this.btn_Delete.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Delete.Location = new System.Drawing.Point(1038, 719);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(60, 40);
+            this.btn_Delete.Size = new System.Drawing.Size(120, 77);
             this.btn_Delete.TabIndex = 31;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
@@ -78,10 +78,10 @@
             // 
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.ForeColor = System.Drawing.Color.Lime;
-            this.btn_Save.Location = new System.Drawing.Point(265, 374);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Save.Location = new System.Drawing.Point(530, 719);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(60, 40);
+            this.btn_Save.Size = new System.Drawing.Size(120, 77);
             this.btn_Save.TabIndex = 30;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = true;
@@ -90,10 +90,10 @@
             // btn_Cancel
             // 
             this.btn_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancel.Location = new System.Drawing.Point(356, 374);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Cancel.Location = new System.Drawing.Point(712, 719);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(60, 40);
+            this.btn_Cancel.Size = new System.Drawing.Size(120, 77);
             this.btn_Cancel.TabIndex = 29;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
@@ -103,10 +103,10 @@
             // 
             this.btn_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Edit.ForeColor = System.Drawing.Color.Blue;
-            this.btn_Edit.Location = new System.Drawing.Point(135, 374);
-            this.btn_Edit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Edit.Location = new System.Drawing.Point(270, 719);
+            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(60, 40);
+            this.btn_Edit.Size = new System.Drawing.Size(120, 77);
             this.btn_Edit.TabIndex = 28;
             this.btn_Edit.Text = "Edit";
             this.btn_Edit.UseVisualStyleBackColor = true;
@@ -116,10 +116,10 @@
             // 
             this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.ForeColor = System.Drawing.Color.Blue;
-            this.btn_Add.Location = new System.Drawing.Point(50, 374);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Add.Location = new System.Drawing.Point(100, 719);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(60, 40);
+            this.btn_Add.Size = new System.Drawing.Size(120, 77);
             this.btn_Add.TabIndex = 27;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -135,12 +135,12 @@
             this.BirthDate,
             this.Address,
             this.Phone});
-            this.dgv_Patients.Location = new System.Drawing.Point(32, 162);
-            this.dgv_Patients.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Patients.Location = new System.Drawing.Point(64, 312);
+            this.dgv_Patients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_Patients.Name = "dgv_Patients";
             this.dgv_Patients.RowHeadersWidth = 51;
             this.dgv_Patients.RowTemplate.Height = 24;
-            this.dgv_Patients.Size = new System.Drawing.Size(562, 195);
+            this.dgv_Patients.Size = new System.Drawing.Size(1124, 375);
             this.dgv_Patients.TabIndex = 26;
             this.dgv_Patients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Patients_CellClick);
             // 
@@ -178,18 +178,18 @@
             // txt_Address
             // 
             this.txt_Address.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txt_Address.Location = new System.Drawing.Point(127, 90);
-            this.txt_Address.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Address.Location = new System.Drawing.Point(254, 173);
+            this.txt_Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Address.Name = "txt_Address";
-            this.txt_Address.Size = new System.Drawing.Size(333, 20);
+            this.txt_Address.Size = new System.Drawing.Size(662, 31);
             this.txt_Address.TabIndex = 25;
             // 
             // dTP_BD
             // 
-            this.dTP_BD.Location = new System.Drawing.Point(380, 15);
-            this.dTP_BD.Margin = new System.Windows.Forms.Padding(2);
+            this.dTP_BD.Location = new System.Drawing.Point(760, 29);
+            this.dTP_BD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dTP_BD.Name = "dTP_BD";
-            this.dTP_BD.Size = new System.Drawing.Size(199, 20);
+            this.dTP_BD.Size = new System.Drawing.Size(394, 31);
             this.dTP_BD.TabIndex = 24;
             // 
             // cb_Gender
@@ -198,36 +198,36 @@
             this.cb_Gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cb_Gender.Location = new System.Drawing.Point(499, 54);
-            this.cb_Gender.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_Gender.Location = new System.Drawing.Point(998, 104);
+            this.cb_Gender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_Gender.Name = "cb_Gender";
-            this.cb_Gender.Size = new System.Drawing.Size(80, 21);
+            this.cb_Gender.Size = new System.Drawing.Size(156, 33);
             this.cb_Gender.TabIndex = 23;
             // 
             // txt_Name
             // 
             this.txt_Name.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txt_Name.Location = new System.Drawing.Point(127, 52);
-            this.txt_Name.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Name.Location = new System.Drawing.Point(254, 100);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(220, 20);
+            this.txt_Name.Size = new System.Drawing.Size(436, 31);
             this.txt_Name.TabIndex = 22;
             // 
             // txt_PID
             // 
             this.txt_PID.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txt_PID.Location = new System.Drawing.Point(127, 19);
-            this.txt_PID.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_PID.Location = new System.Drawing.Point(254, 37);
+            this.txt_PID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_PID.Name = "txt_PID";
-            this.txt_PID.Size = new System.Drawing.Size(68, 20);
+            this.txt_PID.Size = new System.Drawing.Size(132, 31);
             this.txt_PID.TabIndex = 21;
             // 
             // lb_address
             // 
             this.lb_address.AutoSize = true;
             this.lb_address.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_address.Location = new System.Drawing.Point(28, 87);
-            this.lb_address.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_address.Location = new System.Drawing.Point(56, 167);
+            this.lb_address.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_address.Name = "lb_address";
             this.lb_address.Size = new System.Drawing.Size(76, 21);
             this.lb_address.TabIndex = 20;
@@ -237,8 +237,8 @@
             // 
             this.lb_birthday.AutoSize = true;
             this.lb_birthday.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_birthday.Location = new System.Drawing.Point(288, 14);
-            this.lb_birthday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_birthday.Location = new System.Drawing.Point(576, 27);
+            this.lb_birthday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_birthday.Name = "lb_birthday";
             this.lb_birthday.Size = new System.Drawing.Size(88, 21);
             this.lb_birthday.TabIndex = 19;
@@ -248,8 +248,8 @@
             // 
             this.lb_gender.AutoSize = true;
             this.lb_gender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_gender.Location = new System.Drawing.Point(421, 54);
-            this.lb_gender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_gender.Location = new System.Drawing.Point(842, 104);
+            this.lb_gender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_gender.Name = "lb_gender";
             this.lb_gender.Size = new System.Drawing.Size(74, 21);
             this.lb_gender.TabIndex = 18;
@@ -259,8 +259,8 @@
             // 
             this.lb_fullname.AutoSize = true;
             this.lb_fullname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_fullname.Location = new System.Drawing.Point(28, 51);
-            this.lb_fullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_fullname.Location = new System.Drawing.Point(56, 98);
+            this.lb_fullname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_fullname.Name = "lb_fullname";
             this.lb_fullname.Size = new System.Drawing.Size(90, 21);
             this.lb_fullname.TabIndex = 17;
@@ -270,8 +270,8 @@
             // 
             this.lb_patient.AutoSize = true;
             this.lb_patient.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_patient.Location = new System.Drawing.Point(28, 17);
-            this.lb_patient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_patient.Location = new System.Drawing.Point(56, 33);
+            this.lb_patient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_patient.Name = "lb_patient";
             this.lb_patient.Size = new System.Drawing.Size(92, 21);
             this.lb_patient.TabIndex = 16;
@@ -280,10 +280,10 @@
             // btn_Reload
             // 
             this.btn_Reload.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reload.Location = new System.Drawing.Point(402, 124);
-            this.btn_Reload.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Reload.Location = new System.Drawing.Point(804, 238);
+            this.btn_Reload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Reload.Name = "btn_Reload";
-            this.btn_Reload.Size = new System.Drawing.Size(192, 24);
+            this.btn_Reload.Size = new System.Drawing.Size(384, 46);
             this.btn_Reload.TabIndex = 44;
             this.btn_Reload.Text = "Reload";
             this.btn_Reload.UseVisualStyleBackColor = true;
@@ -292,10 +292,10 @@
             // pb_FindByPID
             // 
             this.pb_FindByPID.Image = ((System.Drawing.Image)(resources.GetObject("pb_FindByPID.Image")));
-            this.pb_FindByPID.Location = new System.Drawing.Point(197, 15);
-            this.pb_FindByPID.Margin = new System.Windows.Forms.Padding(2);
+            this.pb_FindByPID.Location = new System.Drawing.Point(394, 29);
+            this.pb_FindByPID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pb_FindByPID.Name = "pb_FindByPID";
-            this.pb_FindByPID.Size = new System.Drawing.Size(20, 24);
+            this.pb_FindByPID.Size = new System.Drawing.Size(40, 46);
             this.pb_FindByPID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_FindByPID.TabIndex = 46;
             this.pb_FindByPID.TabStop = false;
@@ -304,10 +304,10 @@
             // pb_FindByName
             // 
             this.pb_FindByName.Image = ((System.Drawing.Image)(resources.GetObject("pb_FindByName.Image")));
-            this.pb_FindByName.Location = new System.Drawing.Point(356, 52);
-            this.pb_FindByName.Margin = new System.Windows.Forms.Padding(2);
+            this.pb_FindByName.Location = new System.Drawing.Point(712, 100);
+            this.pb_FindByName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pb_FindByName.Name = "pb_FindByName";
-            this.pb_FindByName.Size = new System.Drawing.Size(20, 24);
+            this.pb_FindByName.Size = new System.Drawing.Size(40, 46);
             this.pb_FindByName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_FindByName.TabIndex = 47;
             this.pb_FindByName.TabStop = false;
@@ -316,18 +316,18 @@
             // txt_Phone
             // 
             this.txt_Phone.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txt_Phone.Location = new System.Drawing.Point(127, 127);
-            this.txt_Phone.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Phone.Location = new System.Drawing.Point(254, 244);
+            this.txt_Phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Phone.Name = "txt_Phone";
-            this.txt_Phone.Size = new System.Drawing.Size(220, 20);
+            this.txt_Phone.Size = new System.Drawing.Size(436, 31);
             this.txt_Phone.TabIndex = 49;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 124);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(56, 238);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 21);
             this.label1.TabIndex = 48;
@@ -335,7 +335,7 @@
             // 
             // uc_Patient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.txt_Phone);
             this.Controls.Add(this.label1);
@@ -360,7 +360,7 @@
             this.Controls.Add(this.lb_patient);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uc_Patient";
-            this.Size = new System.Drawing.Size(619, 440);
+            this.Size = new System.Drawing.Size(1238, 846);
             this.Load += new System.EventHandler(this.uc_Patient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Patients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_FindByPID)).EndInit();
